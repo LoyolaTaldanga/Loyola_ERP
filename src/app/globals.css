@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Loyola School, Taldanga brand colors (sourced from loyolataldanga.com stylesheet) */
+  --color-brand-primary: #0c0b39; /* deep navy - header, nav, primary actions */
+  --color-brand-primary-dark: #0e045f; /* footer / darker navy variant */
+  --color-brand-secondary: #e38b00; /* gold/amber - links, accents, highlights */
+  --color-brand-neutral: #4f4f4f;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-brand-primary: var(--color-brand-primary);
+  --color-brand-primary-dark: var(--color-brand-primary-dark);
+  --color-brand-secondary: var(--color-brand-secondary);
+  --color-brand-neutral: var(--color-brand-neutral);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}

@@ -1,0 +1,1647 @@
+{
+  "generatedAt": "2026-09-08T06:46:34.904Z",
+  "classesUpserted": 19,
+  "sectionsUpserted": 51,
+  "subjectsUpserted": 80,
+  "timetableEntriesUpserted": 1900,
+  "crossValidation": {
+    "confirmed": 1306,
+    "unmatched": 481,
+    "mismatches": [
+      {
+        "section": "XII (Arts) A",
+        "day": 5,
+        "period": 1,
+        "classWiseSubject": "POLITICAL SCIENCE",
+        "teacherWiseSubject": "POL. SC",
+        "teacherName": "MS. RIMPY KAUR",
+        "registryEntry": {
+          "className": "XII",
+          "stream": "Arts",
+          "section": "A"
+        }
+      },
+      {
+        "section": "XI (Commerce) A",
+        "day": 1,
+        "period": 4,
+        "classWiseSubject": "COMMERCE",
+        "teacherWiseSubject": "BUSINESS STUDIES",
+        "teacherName": "MR. AMULYA MUKHERJEE",
+        "registryEntry": {
+          "className": "XI",
+          "stream": "Commerce",
+          "section": "A"
+        }
+      },
+      {
+        "section": "XI (Commerce) A",
+        "day": 3,
+        "period": 3,
+        "classWiseSubject": "COMMERCE",
+        "teacherWiseSubject": "BUSINESS STUDIES",
+        "teacherName": "MR. AMULYA MUKHERJEE",
+        "registryEntry": {
+          "className": "XI",
+          "stream": "Commerce",
+          "section": "A"
+        }
+      },
+      {
+        "section": "XI (Commerce) A",
+        "day": 4,
+        "period": 6,
+        "classWiseSubject": "COMMERCE",
+        "teacherWiseSubject": "BUSINESS STUDIES",
+        "teacherName": "MR. AMULYA MUKHERJEE",
+        "registryEntry": {
+          "className": "XI",
+          "stream": "Commerce",
+          "section": "A"
+        }
+      },
+      {
+        "section": "XI (Commerce) A",
+        "day": 5,
+        "period": 6,
+        "classWiseSubject": "COMMERCE",
+        "teacherWiseSubject": "BUSINESS STUDIES",
+        "teacherName": "MR. AMULYA MUKHERJEE",
+        "registryEntry": {
+          "className": "XI",
+          "stream": "Commerce",
+          "section": "A"
+        }
+      },
+      {
+        "section": "XI (Arts) A",
+        "day": 1,
+        "period": 1,
+        "classWiseSubject": "POL.SCIENCE",
+        "teacherWiseSubject": "POL. SC",
+        "teacherName": "MS. RIMPY KAUR",
+        "registryEntry": {
+          "className": "XI",
+          "stream": "Arts",
+          "section": "A"
+        }
+      },
+      {
+        "section": "XI (Arts) A",
+        "day": 2,
+        "period": 3,
+        "classWiseSubject": "HISTORY",
+        "teacherWiseSubject": "ACCOUNTS",
+        "teacherName": "MR. AMULYA MUKHERJEE",
+        "registryEntry": {
+          "className": "XI",
+          "stream": "Arts",
+          "section": "A"
+        }
+      },
+      {
+        "section": "XI (Arts) A",
+        "day": 3,
+        "period": 3,
+        "classWiseSubject": "POLITICAL SCIENCE",
+        "teacherWiseSubject": "POL. SC",
+        "teacherName": "MS. RIMPY KAUR",
+        "registryEntry": {
+          "className": "XI",
+          "stream": "Arts",
+          "section": "A"
+        }
+      },
+      {
+        "section": "XI (Arts) A",
+        "day": 4,
+        "period": 5,
+        "classWiseSubject": "PL. SCIENCE",
+        "teacherWiseSubject": "POLITICAL SCIENCE",
+        "teacherName": "MS. RIMPY KAUR",
+        "registryEntry": {
+          "className": "XI",
+          "stream": "Arts",
+          "section": "A"
+        }
+      },
+      {
+        "section": "X C",
+        "day": 1,
+        "period": 6,
+        "classWiseSubject": "HIN/BEN",
+        "teacherWiseSubject": "BENGALI",
+        "teacherName": "MS. SANCHITA KUNDU",
+        "registryEntry": {
+          "className": "X",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "X C",
+        "day": 3,
+        "period": 6,
+        "classWiseSubject": "HIN/BEN",
+        "teacherWiseSubject": "BENGALI",
+        "teacherName": "MS. SANCHITA KUNDU",
+        "registryEntry": {
+          "className": "X",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "X C",
+        "day": 4,
+        "period": 3,
+        "classWiseSubject": "HIN/BEN",
+        "teacherWiseSubject": "BENGALI",
+        "teacherName": "MS. SANCHITA KUNDU",
+        "registryEntry": {
+          "className": "X",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "X C",
+        "day": 5,
+        "period": 7,
+        "classWiseSubject": "HIN/BEN",
+        "teacherWiseSubject": "BENGALI",
+        "teacherName": "MS. SANCHITA KUNDU",
+        "registryEntry": {
+          "className": "X",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "IX A",
+        "day": 4,
+        "period": 2,
+        "classWiseSubject": "BIO9LOGY",
+        "teacherWiseSubject": "BIOLOGY",
+        "teacherName": "MS. SWARNALI PALIT",
+        "registryEntry": {
+          "className": "IX",
+          "stream": null,
+          "section": "A"
+        }
+      },
+      {
+        "section": "IX C",
+        "day": 2,
+        "period": 5,
+        "classWiseSubject": "HIN/BEN",
+        "teacherWiseSubject": "BENGALI",
+        "teacherName": "MS. SANCHITA KUNDU",
+        "registryEntry": {
+          "className": "IX",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "IX C",
+        "day": 3,
+        "period": 5,
+        "classWiseSubject": "HIN/BEN",
+        "teacherWiseSubject": "BENGALI",
+        "teacherName": "MS. SANCHITA KUNDU",
+        "registryEntry": {
+          "className": "IX",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "IX C",
+        "day": 4,
+        "period": 5,
+        "classWiseSubject": "HIN/BEN",
+        "teacherWiseSubject": "BENGALI",
+        "teacherName": "MS. SANCHITA KUNDU",
+        "registryEntry": {
+          "className": "IX",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "IX C",
+        "day": 5,
+        "period": 6,
+        "classWiseSubject": "HIN/BEN",
+        "teacherWiseSubject": "BENGALI",
+        "teacherName": "MS. SANCHITA KUNDU",
+        "registryEntry": {
+          "className": "IX",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "IX D",
+        "day": 1,
+        "period": 8,
+        "classWiseSubject": "COMP/ECO",
+        "teacherWiseSubject": "COMPUTER",
+        "teacherName": "MR. AJAY PRASAD",
+        "registryEntry": {
+          "className": "IX",
+          "stream": null,
+          "section": "D"
+        }
+      },
+      {
+        "section": "IX D",
+        "day": 3,
+        "period": 4,
+        "classWiseSubject": "COMP/ECO",
+        "teacherWiseSubject": "COMPUTER",
+        "teacherName": "MR. AJAY PRASAD",
+        "registryEntry": {
+          "className": "IX",
+          "stream": null,
+          "section": "D"
+        }
+      },
+      {
+        "section": "IX D",
+        "day": 5,
+        "period": 4,
+        "classWiseSubject": "COMP(P)/ECO",
+        "teacherWiseSubject": "COMPUTER",
+        "teacherName": "MR. AJAY PRASAD",
+        "registryEntry": {
+          "className": "IX",
+          "stream": null,
+          "section": "D"
+        }
+      },
+      {
+        "section": "VIII A",
+        "day": 1,
+        "period": 6,
+        "classWiseSubject": "E.LIT",
+        "teacherWiseSubject": "GEOGRAPHY",
+        "teacherName": "MR. RUPENDU SINHA",
+        "registryEntry": {
+          "className": "VIII",
+          "stream": null,
+          "section": "A"
+        }
+      },
+      {
+        "section": "VIII A",
+        "day": 3,
+        "period": 7,
+        "classWiseSubject": "SINGING",
+        "teacherWiseSubject": "DANCE",
+        "teacherName": "MS. ANKITA ROY",
+        "registryEntry": {
+          "className": "VIII",
+          "stream": null,
+          "section": "A"
+        }
+      },
+      {
+        "section": "VIII C",
+        "day": 1,
+        "period": 1,
+        "classWiseSubject": "P.T.",
+        "teacherWiseSubject": "P.T",
+        "teacherName": "MR. AMIT VISWAKARMA",
+        "registryEntry": {
+          "className": "VIII",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "VIII C",
+        "day": 1,
+        "period": 3,
+        "classWiseSubject": "HINDI",
+        "teacherWiseSubject": "BENGALI",
+        "teacherName": "MR. ALOKENATH GUPTA",
+        "registryEntry": {
+          "className": "VIII",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "VIII C",
+        "day": 2,
+        "period": 7,
+        "classWiseSubject": "SINGING",
+        "teacherWiseSubject": "DANCE",
+        "teacherName": "MS. ANKITA ROY",
+        "registryEntry": {
+          "className": "VIII",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "VIII C",
+        "day": 3,
+        "period": 3,
+        "classWiseSubject": "HINDI",
+        "teacherWiseSubject": "BENGALI",
+        "teacherName": "MR. ALOKENATH GUPTA",
+        "registryEntry": {
+          "className": "VIII",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "VIII C",
+        "day": 5,
+        "period": 2,
+        "classWiseSubject": "HINDI",
+        "teacherWiseSubject": "BENGALI",
+        "teacherName": "MR. ALOKENATH GUPTA",
+        "registryEntry": {
+          "className": "VIII",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "VIII D",
+        "day": 1,
+        "period": 6,
+        "classWiseSubject": "SINGING",
+        "teacherWiseSubject": "DANCE",
+        "teacherName": "MS. ANKITA ROY",
+        "registryEntry": {
+          "className": "VIII",
+          "stream": null,
+          "section": "D"
+        }
+      },
+      {
+        "section": "VII A",
+        "day": 2,
+        "period": 8,
+        "classWiseSubject": "MUSIC",
+        "teacherWiseSubject": "DANCE",
+        "teacherName": "MS. ANKITA ROY",
+        "registryEntry": {
+          "className": "VII",
+          "stream": null,
+          "section": "A"
+        }
+      },
+      {
+        "section": "VII A",
+        "day": 3,
+        "period": 8,
+        "classWiseSubject": "MATHS",
+        "teacherWiseSubject": "M.APTITUDE",
+        "teacherName": "MS. NIDHI KUMARI",
+        "registryEntry": {
+          "className": "VII",
+          "stream": null,
+          "section": "A"
+        }
+      },
+      {
+        "section": "VII B",
+        "day": 4,
+        "period": 4,
+        "classWiseSubject": "CHEMISTY",
+        "teacherWiseSubject": "CHEMISTRY",
+        "teacherName": "MR. VIKASH MISHRA",
+        "registryEntry": {
+          "className": "VII",
+          "stream": null,
+          "section": "B"
+        }
+      },
+      {
+        "section": "VII B",
+        "day": 5,
+        "period": 5,
+        "classWiseSubject": "MUSIC",
+        "teacherWiseSubject": "DANCE",
+        "teacherName": "MS. ANKITA ROY",
+        "registryEntry": {
+          "className": "VII",
+          "stream": null,
+          "section": "B"
+        }
+      },
+      {
+        "section": "VII C",
+        "day": 1,
+        "period": 1,
+        "classWiseSubject": "P.T.",
+        "teacherWiseSubject": "P.T",
+        "teacherName": "MS. LATA PILLAI",
+        "registryEntry": {
+          "className": "VII",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "VII C",
+        "day": 1,
+        "period": 2,
+        "classWiseSubject": "HIN/BEN",
+        "teacherWiseSubject": "BENGALI",
+        "teacherName": "MS. MANOSHI MUKHERJEE",
+        "registryEntry": {
+          "className": "VII",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "VII C",
+        "day": 2,
+        "period": 2,
+        "classWiseSubject": "HIN/BEN",
+        "teacherWiseSubject": "BENGALI",
+        "teacherName": "MS. MANOSHI MUKHERJEE",
+        "registryEntry": {
+          "className": "VII",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "VII C",
+        "day": 3,
+        "period": 2,
+        "classWiseSubject": "HIN/BEN",
+        "teacherWiseSubject": "BENGALI",
+        "teacherName": "MS. MANOSHI MUKHERJEE",
+        "registryEntry": {
+          "className": "VII",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "VII C",
+        "day": 4,
+        "period": 2,
+        "classWiseSubject": "H/B STORY",
+        "teacherWiseSubject": "B.STORY",
+        "teacherName": "MS. MANOSHI MUKHERJEE",
+        "registryEntry": {
+          "className": "VII",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "VII C",
+        "day": 5,
+        "period": 6,
+        "classWiseSubject": "MUSIC",
+        "teacherWiseSubject": "DANCE",
+        "teacherName": "MS. ANKITA ROY",
+        "registryEntry": {
+          "className": "VII",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "VII D",
+        "day": 1,
+        "period": 8,
+        "classWiseSubject": "MUSIC",
+        "teacherWiseSubject": "DANCE",
+        "teacherName": "MS. ANKITA ROY",
+        "registryEntry": {
+          "className": "VII",
+          "stream": null,
+          "section": "D"
+        }
+      },
+      {
+        "section": "VII D",
+        "day": 2,
+        "period": 3,
+        "classWiseSubject": "COMPUTER(P0",
+        "teacherWiseSubject": "COMPUTER",
+        "teacherName": "MR. RAMGOPAL KABIRAJ",
+        "registryEntry": {
+          "className": "VII",
+          "stream": null,
+          "section": "D"
+        }
+      },
+      {
+        "section": "VII D",
+        "day": 3,
+        "period": 6,
+        "classWiseSubject": "MATHS",
+        "teacherWiseSubject": "GEOGRAPHY",
+        "teacherName": "MS. CATHERINE SYLVESTER",
+        "registryEntry": {
+          "className": "VII",
+          "stream": null,
+          "section": "D"
+        }
+      },
+      {
+        "section": "VII D",
+        "day": 4,
+        "period": 4,
+        "classWiseSubject": "M.APTITUDE",
+        "teacherWiseSubject": "MATHS",
+        "teacherName": "MR. ALOKENATH GUPTA",
+        "registryEntry": {
+          "className": "VII",
+          "stream": null,
+          "section": "D"
+        }
+      },
+      {
+        "section": "VII D",
+        "day": 4,
+        "period": 6,
+        "classWiseSubject": "GEOGRAPHY",
+        "teacherWiseSubject": "E.LIT",
+        "teacherName": "MS. PALLABI MUKHERJEE",
+        "registryEntry": {
+          "className": "VII",
+          "stream": null,
+          "section": "D"
+        }
+      },
+      {
+        "section": "VI A",
+        "day": 5,
+        "period": 3,
+        "classWiseSubject": "E.ALNG",
+        "teacherWiseSubject": "E.LANG",
+        "teacherName": "MS. PAYEL SALUJA",
+        "registryEntry": {
+          "className": "VI",
+          "stream": null,
+          "section": "A"
+        }
+      },
+      {
+        "section": "VI A",
+        "day": 5,
+        "period": 7,
+        "classWiseSubject": "MUSIC",
+        "teacherWiseSubject": "DANCE",
+        "teacherName": "MS. ANKITA ROY",
+        "registryEntry": {
+          "className": "VI",
+          "stream": null,
+          "section": "A"
+        }
+      },
+      {
+        "section": "VI B",
+        "day": 2,
+        "period": 6,
+        "classWiseSubject": "MUSIC",
+        "teacherWiseSubject": "DANCE",
+        "teacherName": "MS. ANKITA ROY",
+        "registryEntry": {
+          "className": "VI",
+          "stream": null,
+          "section": "B"
+        }
+      },
+      {
+        "section": "VI B",
+        "day": 5,
+        "period": 4,
+        "classWiseSubject": "HIST-CIV",
+        "teacherWiseSubject": "BIOLOGY",
+        "teacherName": "MS. MANOSHI MUKHERJEE",
+        "registryEntry": {
+          "className": "VI",
+          "stream": null,
+          "section": "B"
+        }
+      },
+      {
+        "section": "VI B",
+        "day": 5,
+        "period": 6,
+        "classWiseSubject": "BIOLOGY",
+        "teacherWiseSubject": "HIST-CIV",
+        "teacherName": "MR. VIKASH MISHRA",
+        "registryEntry": {
+          "className": "VI",
+          "stream": null,
+          "section": "B"
+        }
+      },
+      {
+        "section": "VI C",
+        "day": 1,
+        "period": 4,
+        "classWiseSubject": "HIN/BEN",
+        "teacherWiseSubject": "BENGALI",
+        "teacherName": "MS. PRIYANKA BANERJEE",
+        "registryEntry": {
+          "className": "VI",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "VI C",
+        "day": 1,
+        "period": 7,
+        "classWiseSubject": "MUSIC",
+        "teacherWiseSubject": "DANCE",
+        "teacherName": "MS. ANKITA ROY",
+        "registryEntry": {
+          "className": "VI",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "VI C",
+        "day": 2,
+        "period": 4,
+        "classWiseSubject": "HIN/BEN",
+        "teacherWiseSubject": "BENGALI",
+        "teacherName": "MS. PRIYANKA BANERJEE",
+        "registryEntry": {
+          "className": "VI",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "VI C",
+        "day": 3,
+        "period": 4,
+        "classWiseSubject": "HIN/BEN",
+        "teacherWiseSubject": "BENGALI",
+        "teacherName": "MS. PRIYANKA BANERJEE",
+        "registryEntry": {
+          "className": "VI",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "VI C",
+        "day": 4,
+        "period": 4,
+        "classWiseSubject": "H/B STORY",
+        "teacherWiseSubject": "B.STORY",
+        "teacherName": "MS. PRIYANKA BANERJEE",
+        "registryEntry": {
+          "className": "VI",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "VI D",
+        "day": 3,
+        "period": 6,
+        "classWiseSubject": "MUSIC",
+        "teacherWiseSubject": "DANCE",
+        "teacherName": "MS. ANKITA ROY",
+        "registryEntry": {
+          "className": "VI",
+          "stream": null,
+          "section": "D"
+        }
+      },
+      {
+        "section": "V A",
+        "day": 3,
+        "period": 2,
+        "classWiseSubject": "E.VOCABULARY",
+        "teacherWiseSubject": "E.VOC/WRITING",
+        "teacherName": "MS. DEBASHREE SENGUPTA",
+        "registryEntry": {
+          "className": "V",
+          "stream": null,
+          "section": "A"
+        }
+      },
+      {
+        "section": "V A",
+        "day": 3,
+        "period": 7,
+        "classWiseSubject": "SOCILA STUDIES",
+        "teacherWiseSubject": "SOCIAL STUDIES",
+        "teacherName": "MS. MANOSHI MUKHERJEE",
+        "registryEntry": {
+          "className": "V",
+          "stream": null,
+          "section": "A"
+        }
+      },
+      {
+        "section": "V A",
+        "day": 4,
+        "period": 5,
+        "classWiseSubject": "E.READING/RECITATION",
+        "teacherWiseSubject": "E.READING/RECI",
+        "teacherName": "MS. DEBASHREE SENGUPTA",
+        "registryEntry": {
+          "className": "V",
+          "stream": null,
+          "section": "A"
+        }
+      },
+      {
+        "section": "V A",
+        "day": 5,
+        "period": 2,
+        "classWiseSubject": "SOCILA STUDIES",
+        "teacherWiseSubject": "SOCIAL STUDIES",
+        "teacherName": "MS. MANOSHI MUKHERJEE",
+        "registryEntry": {
+          "className": "V",
+          "stream": null,
+          "section": "A"
+        }
+      },
+      {
+        "section": "V A",
+        "day": 5,
+        "period": 4,
+        "classWiseSubject": "MUSIC",
+        "teacherWiseSubject": "DANCE",
+        "teacherName": "MS. ANKITA ROY",
+        "registryEntry": {
+          "className": "V",
+          "stream": null,
+          "section": "A"
+        }
+      },
+      {
+        "section": "V B",
+        "day": 4,
+        "period": 4,
+        "classWiseSubject": "E.VOCABUKARY/WRITING",
+        "teacherWiseSubject": "GAMES",
+        "teacherName": "MS. PRIYANKA GORAI",
+        "registryEntry": {
+          "className": "V",
+          "stream": null,
+          "section": "B"
+        }
+      },
+      {
+        "section": "V B",
+        "day": 4,
+        "period": 8,
+        "classWiseSubject": "MUSIC",
+        "teacherWiseSubject": "DANCE",
+        "teacherName": "MS. ANKITA ROY",
+        "registryEntry": {
+          "className": "V",
+          "stream": null,
+          "section": "B"
+        }
+      },
+      {
+        "section": "V B",
+        "day": 5,
+        "period": 3,
+        "classWiseSubject": "LIBRARY",
+        "teacherWiseSubject": "E.VOC/WRITING",
+        "teacherName": "MS. PRIYANKA GORAI",
+        "registryEntry": {
+          "className": "V",
+          "stream": null,
+          "section": "B"
+        }
+      },
+      {
+        "section": "V B",
+        "day": 5,
+        "period": 7,
+        "classWiseSubject": "G.K,",
+        "teacherWiseSubject": "G.K.",
+        "teacherName": "MS. NIDHI SINGH",
+        "registryEntry": {
+          "className": "V",
+          "stream": null,
+          "section": "B"
+        }
+      },
+      {
+        "section": "V C",
+        "day": 1,
+        "period": 1,
+        "classWiseSubject": "HIN/BEN",
+        "teacherWiseSubject": "BENGALI",
+        "teacherName": "MS. MANOSHI MUKHERJEE",
+        "registryEntry": {
+          "className": "V",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "V C",
+        "day": 2,
+        "period": 7,
+        "classWiseSubject": "HIN/BEN",
+        "teacherWiseSubject": "BENGALI",
+        "teacherName": "MS. MANOSHI MUKHERJEE",
+        "registryEntry": {
+          "className": "V",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "V C",
+        "day": 3,
+        "period": 6,
+        "classWiseSubject": "SANS/H3L",
+        "teacherWiseSubject": "SANSKRIT",
+        "teacherName": "MR. TOUSHIF KHAN",
+        "registryEntry": {
+          "className": "V",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "V C",
+        "day": 3,
+        "period": 8,
+        "classWiseSubject": "MUSIC",
+        "teacherWiseSubject": "DANCE",
+        "teacherName": "MS. ANKITA ROY",
+        "registryEntry": {
+          "className": "V",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "V C",
+        "day": 4,
+        "period": 6,
+        "classWiseSubject": "SANS/H3L",
+        "teacherWiseSubject": "SANSKRIT",
+        "teacherName": "MR. TOUSHIF KHAN",
+        "registryEntry": {
+          "className": "V",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "V C",
+        "day": 5,
+        "period": 1,
+        "classWiseSubject": "HIN/BEN",
+        "teacherWiseSubject": "BENGALI",
+        "teacherName": "MS. MANOSHI MUKHERJEE",
+        "registryEntry": {
+          "className": "V",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "V D",
+        "day": 4,
+        "period": 7,
+        "classWiseSubject": "MUSIC",
+        "teacherWiseSubject": "DANCE",
+        "teacherName": "MS. ANKITA ROY",
+        "registryEntry": {
+          "className": "V",
+          "stream": null,
+          "section": "D"
+        }
+      },
+      {
+        "section": "V D",
+        "day": 5,
+        "period": 3,
+        "classWiseSubject": "LIBRARY",
+        "teacherWiseSubject": "E.VOC/WRITING",
+        "teacherName": "MR. DIBYODOY CHAKRABORTY",
+        "registryEntry": {
+          "className": "V",
+          "stream": null,
+          "section": "D"
+        }
+      },
+      {
+        "section": "IV A",
+        "day": 4,
+        "period": 4,
+        "classWiseSubject": "E.WRITING",
+        "teacherWiseSubject": "E.VOC/WRITING",
+        "teacherName": "MS. LATA PILLAI",
+        "registryEntry": {
+          "className": "IV",
+          "stream": null,
+          "section": "A"
+        }
+      },
+      {
+        "section": "IV B",
+        "day": 1,
+        "period": 8,
+        "classWiseSubject": "E.WRITING",
+        "teacherWiseSubject": "E.VOC/WRITING",
+        "teacherName": "MS. PALLABI MUKHERJEE",
+        "registryEntry": {
+          "className": "IV",
+          "stream": null,
+          "section": "B"
+        }
+      },
+      {
+        "section": "III B",
+        "day": 4,
+        "period": 5,
+        "classWiseSubject": "E.VOCABULARY",
+        "teacherWiseSubject": "SOCIAL STUDIES",
+        "teacherName": "MS. MANOSHI MUKHERJEE",
+        "registryEntry": {
+          "className": "III",
+          "stream": null,
+          "section": "B"
+        }
+      },
+      {
+        "section": "III B",
+        "day": 5,
+        "period": 4,
+        "classWiseSubject": "H.VOC/WRITING",
+        "teacherWiseSubject": "H.VOCABULARY",
+        "teacherName": "SR. SHANTA  BAXLA",
+        "registryEntry": {
+          "className": "III",
+          "stream": null,
+          "section": "B"
+        }
+      },
+      {
+        "section": "III B",
+        "day": 5,
+        "period": 6,
+        "classWiseSubject": "SOCIAL STUDIES",
+        "teacherWiseSubject": "E.VOCABULARY",
+        "teacherName": "MR. DIBYODOY CHAKRABORTY",
+        "registryEntry": {
+          "className": "III",
+          "stream": null,
+          "section": "B"
+        }
+      },
+      {
+        "section": "III C",
+        "day": 2,
+        "period": 5,
+        "classWiseSubject": "HIN/BEN",
+        "teacherWiseSubject": "BENGALI",
+        "teacherName": "MS. MANOSHI MUKHERJEE",
+        "registryEntry": {
+          "className": "III",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "III C",
+        "day": 3,
+        "period": 5,
+        "classWiseSubject": "HIN/BEN",
+        "teacherWiseSubject": "BENGALI",
+        "teacherName": "MS. MANOSHI MUKHERJEE",
+        "registryEntry": {
+          "className": "III",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "III C",
+        "day": 4,
+        "period": 6,
+        "classWiseSubject": "HIN/BEN",
+        "teacherWiseSubject": "BENGALI",
+        "teacherName": "MS. MANOSHI MUKHERJEE",
+        "registryEntry": {
+          "className": "III",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "III C",
+        "day": 5,
+        "period": 5,
+        "classWiseSubject": "H/B VOC",
+        "teacherWiseSubject": "BENGALI",
+        "teacherName": "MS. MANOSHI MUKHERJEE",
+        "registryEntry": {
+          "className": "III",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "III D",
+        "day": 4,
+        "period": 5,
+        "classWiseSubject": "CONVERSATION",
+        "teacherWiseSubject": "E.VOCABULARY",
+        "teacherName": "MS. FIRDAUS KHAN",
+        "registryEntry": {
+          "className": "III",
+          "stream": null,
+          "section": "D"
+        }
+      },
+      {
+        "section": "II C",
+        "day": 2,
+        "period": 7,
+        "classWiseSubject": "H/B VOCABULARY",
+        "teacherWiseSubject": "H.VOCABULARY",
+        "teacherName": "MS. SANNU VICTOR",
+        "registryEntry": {
+          "className": "II",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "I C",
+        "day": 2,
+        "period": 3,
+        "classWiseSubject": "H/B GRAMMAR",
+        "teacherWiseSubject": "B.GRAMMAR",
+        "teacherName": "MS. RAMA MASIH",
+        "registryEntry": {
+          "className": "I",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "UKG A",
+        "day": 1,
+        "period": 2,
+        "classWiseSubject": "HIN/BEN",
+        "teacherWiseSubject": "HINDI",
+        "teacherName": "MS. SANNU VICTOR",
+        "registryEntry": {
+          "className": "UKG",
+          "stream": null,
+          "section": "A"
+        }
+      },
+      {
+        "section": "UKG A",
+        "day": 2,
+        "period": 2,
+        "classWiseSubject": "HIN/BEN",
+        "teacherWiseSubject": "HINDI",
+        "teacherName": "MS. SANNU VICTOR",
+        "registryEntry": {
+          "className": "UKG",
+          "stream": null,
+          "section": "A"
+        }
+      },
+      {
+        "section": "UKG A",
+        "day": 3,
+        "period": 2,
+        "classWiseSubject": "HIN/BEN",
+        "teacherWiseSubject": "HINDI",
+        "teacherName": "MS. SANNU VICTOR",
+        "registryEntry": {
+          "className": "UKG",
+          "stream": null,
+          "section": "A"
+        }
+      },
+      {
+        "section": "UKG C",
+        "day": 1,
+        "period": 2,
+        "classWiseSubject": "EVS",
+        "teacherWiseSubject": "HINDI",
+        "teacherName": "MS. IPSHITA TIWARY",
+        "registryEntry": {
+          "className": "UKG",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "UKG C",
+        "day": 2,
+        "period": 2,
+        "classWiseSubject": "RECITATION",
+        "teacherWiseSubject": "HINDI",
+        "teacherName": "MS. IPSHITA TIWARY",
+        "registryEntry": {
+          "className": "UKG",
+          "stream": null,
+          "section": "C"
+        }
+      },
+      {
+        "section": "UKG C",
+        "day": 3,
+        "period": 2,
+        "classWiseSubject": "CONVERSATION",
+        "teacherWiseSubject": "HINDI",
+        "teacherName": "MS. IPSHITA TIWARY",
+        "registryEntry": {
+          "className": "UKG",
+          "stream": null,
+          "section": "C"
+        }
+      }
+    ],
+    "ambiguous": [
+      {
+        "section": "XII (Science) A",
+        "day": 1,
+        "period": 5,
+        "classWiseSubject": "PHYSICS",
+        "candidates": [
+          {
+            "teacherName": "MS. NIDHI SINGH",
+            "subjectRaw": "PRACTICALS"
+          },
+          {
+            "teacherName": "MR.RAJESH PATHAK",
+            "subjectRaw": "PRACTICALS"
+          }
+        ]
+      },
+      {
+        "section": "XII (Science) A",
+        "day": 2,
+        "period": 5,
+        "classWiseSubject": "CHEMISTRY",
+        "candidates": [
+          {
+            "teacherName": "MS. NIDHI SINGH",
+            "subjectRaw": "PRACTICALS"
+          },
+          {
+            "teacherName": "MR.RAJESH PATHAK",
+            "subjectRaw": "PRACTICALS"
+          }
+        ]
+      },
+      {
+        "section": "X A",
+        "day": 2,
+        "period": 8,
+        "classWiseSubject": "SCIENCE LAB",
+        "candidates": [
+          {
+            "teacherName": "MS. NIDHI SINGH",
+            "subjectRaw": "SCIENCE LAB"
+          },
+          {
+            "teacherName": "MR.RAJESH PATHAK",
+            "subjectRaw": "SCIENCE LAB"
+          }
+        ]
+      },
+      {
+        "section": "X B",
+        "day": 3,
+        "period": 8,
+        "classWiseSubject": "SCIENCE LAB",
+        "candidates": [
+          {
+            "teacherName": "MR. AMIT VISWAKARMA",
+            "subjectRaw": "LAB"
+          },
+          {
+            "teacherName": "MR. ABHIJIT DAS",
+            "subjectRaw": "SCIENCE LAB"
+          },
+          {
+            "teacherName": "MS. SWARNALI PALIT",
+            "subjectRaw": "SCIENCE LAB"
+          }
+        ]
+      },
+      {
+        "section": "X C",
+        "day": 1,
+        "period": 8,
+        "classWiseSubject": "SCIENCE LAB",
+        "candidates": [
+          {
+            "teacherName": "MR. AMIT VISWAKARMA",
+            "subjectRaw": "LAB"
+          },
+          {
+            "teacherName": "MR. ABHIJIT DAS",
+            "subjectRaw": "SCIENCE LAB"
+          },
+          {
+            "teacherName": "MS. SWARNALI PALIT",
+            "subjectRaw": "SCIENCE LAB"
+          }
+        ]
+      },
+      {
+        "section": "X C",
+        "day": 2,
+        "period": 5,
+        "classWiseSubject": "COMP/ECO",
+        "candidates": [
+          {
+            "teacherName": "MR. CECIL FERGUSAN",
+            "subjectRaw": "ECONOMICS"
+          },
+          {
+            "teacherName": "MR. RAMGOPAL KABIRAJ",
+            "subjectRaw": "COMPUTER"
+          }
+        ]
+      },
+      {
+        "section": "X C",
+        "day": 3,
+        "period": 7,
+        "classWiseSubject": "COMP/ECO",
+        "candidates": [
+          {
+            "teacherName": "MR. CECIL FERGUSAN",
+            "subjectRaw": "ECONOMICS"
+          },
+          {
+            "teacherName": "MR. RAMGOPAL KABIRAJ",
+            "subjectRaw": "COMPUTER"
+          }
+        ]
+      },
+      {
+        "section": "X C",
+        "day": 5,
+        "period": 3,
+        "classWiseSubject": "COMP/ECO",
+        "candidates": [
+          {
+            "teacherName": "MR. CECIL FERGUSAN",
+            "subjectRaw": "ECONOMICS"
+          },
+          {
+            "teacherName": "MR. RAMGOPAL KABIRAJ",
+            "subjectRaw": "COMPUTER(P)"
+          }
+        ]
+      },
+      {
+        "section": "IX A",
+        "day": 4,
+        "period": 7,
+        "classWiseSubject": "SCIENCE LAB",
+        "candidates": [
+          {
+            "teacherName": "MR. AMIT VISWAKARMA",
+            "subjectRaw": "LAB"
+          },
+          {
+            "teacherName": "MR. ABHIJIT DAS",
+            "subjectRaw": "LAB"
+          },
+          {
+            "teacherName": "MS. SWARNALI PALIT",
+            "subjectRaw": "SCIENCE LAB"
+          }
+        ]
+      },
+      {
+        "section": "IX B",
+        "day": 1,
+        "period": 8,
+        "classWiseSubject": "E.LIT",
+        "candidates": [
+          {
+            "teacherName": "MS.RITA SEN",
+            "subjectRaw": "E.LIT"
+          },
+          {
+            "teacherName": "MR. RAMGOPAL KABIRAJ",
+            "subjectRaw": "COMPUTER"
+          }
+        ]
+      },
+      {
+        "section": "IX B",
+        "day": 2,
+        "period": 7,
+        "classWiseSubject": "SCIENCE LAB",
+        "candidates": [
+          {
+            "teacherName": "MR. VIKASH MISHRA",
+            "subjectRaw": "SCIENCE LAB"
+          },
+          {
+            "teacherName": "MR. JAYANTO DAS",
+            "subjectRaw": "LAB"
+          }
+        ]
+      },
+      {
+        "section": "IX B",
+        "day": 3,
+        "period": 4,
+        "classWiseSubject": "GEOGRAPHY",
+        "candidates": [
+          {
+            "teacherName": "MR. RUPENDU SINHA",
+            "subjectRaw": "GEOGRAPHY"
+          },
+          {
+            "teacherName": "MR. RAMGOPAL KABIRAJ",
+            "subjectRaw": "COMPUTER"
+          }
+        ]
+      },
+      {
+        "section": "IX B",
+        "day": 5,
+        "period": 4,
+        "classWiseSubject": "CHEMISTRY",
+        "candidates": [
+          {
+            "teacherName": "MR. VIKASH MISHRA",
+            "subjectRaw": "CHEMISTRY"
+          },
+          {
+            "teacherName": "MR. RAMGOPAL KABIRAJ",
+            "subjectRaw": "COMPUTER(P)"
+          }
+        ]
+      },
+      {
+        "section": "IX C",
+        "day": 1,
+        "period": 7,
+        "classWiseSubject": "SCIENCE LAB",
+        "candidates": [
+          {
+            "teacherName": "MR.RAJESH PATHAK",
+            "subjectRaw": "SCIENCE LAB"
+          },
+          {
+            "teacherName": "MR. MUKUL BANERJEE",
+            "subjectRaw": "LAB"
+          },
+          {
+            "teacherName": "MR. ALOKENATH GUPTA",
+            "subjectRaw": "LAB"
+          }
+        ]
+      },
+      {
+        "section": "IX D",
+        "day": 2,
+        "period": 6,
+        "classWiseSubject": "E.LANG",
+        "candidates": [
+          {
+            "teacherName": "MR. CECIL FERGUSAN",
+            "subjectRaw": "E.LANG"
+          },
+          {
+            "teacherName": "MR. AJAY PRASAD",
+            "subjectRaw": "COMPUTER(P)"
+          }
+        ]
+      },
+      {
+        "section": "IX D",
+        "day": 3,
+        "period": 7,
+        "classWiseSubject": "SCIENCE LAB",
+        "candidates": [
+          {
+            "teacherName": "MS. NIDHI SINGH",
+            "subjectRaw": "SCIENCE LAB"
+          },
+          {
+            "teacherName": "MR.RAJESH PATHAK",
+            "subjectRaw": "SCIENCE LAB"
+          }
+        ]
+      },
+      {
+        "section": "VIII A",
+        "day": 1,
+        "period": 5,
+        "classWiseSubject": "GEOGRAPHY",
+        "candidates": [
+          {
+            "teacherName": "MR. MUKUL BANERJEE",
+            "subjectRaw": "G.K."
+          },
+          {
+            "teacherName": "MR. DEBPRIYA GANGULY",
+            "subjectRaw": "E.LIT"
+          }
+        ]
+      },
+      {
+        "section": "VIII C",
+        "day": 4,
+        "period": 5,
+        "classWiseSubject": "H.STORY",
+        "candidates": [
+          {
+            "teacherName": "MR. AJAY PRASAD",
+            "subjectRaw": "H.STORY"
+          },
+          {
+            "teacherName": "MS. PALLABI MUKHERJEE",
+            "subjectRaw": "B.STORY"
+          }
+        ]
+      },
+      {
+        "section": "VIII C",
+        "day": 4,
+        "period": 6,
+        "classWiseSubject": "GEOGRAPHY",
+        "candidates": [
+          {
+            "teacherName": "MR. RUPENDU SINHA",
+            "subjectRaw": "GEOGRAPHY"
+          },
+          {
+            "teacherName": "MS. ANKITA ROY",
+            "subjectRaw": "DANCE"
+          }
+        ]
+      },
+      {
+        "section": "V A",
+        "day": 1,
+        "period": 8,
+        "classWiseSubject": "COMPUTER",
+        "candidates": [
+          {
+            "teacherName": "MS. CATHERINE SYLVESTER",
+            "subjectRaw": "COMPUTER(P)"
+          },
+          {
+            "teacherName": "MS.MANISHA PATRA",
+            "subjectRaw": "COMP.LAB"
+          }
+        ]
+      },
+      {
+        "section": "V C",
+        "day": 1,
+        "period": 5,
+        "classWiseSubject": "H/B STORY",
+        "candidates": [
+          {
+            "teacherName": "MS. DEBASHREE SENGUPTA",
+            "subjectRaw": "H.STORY"
+          },
+          {
+            "teacherName": "MS. MANOSHI MUKHERJEE",
+            "subjectRaw": "B.STORY"
+          }
+        ]
+      },
+      {
+        "section": "V C",
+        "day": 4,
+        "period": 4,
+        "classWiseSubject": "H/B GRAMMAR",
+        "candidates": [
+          {
+            "teacherName": "MS. DEBASHREE SENGUPTA",
+            "subjectRaw": "H.GRAMMAR"
+          },
+          {
+            "teacherName": "MS. MANOSHI MUKHERJEE",
+            "subjectRaw": "B.GRAMMAR"
+          }
+        ]
+      },
+      {
+        "section": "III C",
+        "day": 1,
+        "period": 3,
+        "classWiseSubject": "H/B GRAMMAR",
+        "candidates": [
+          {
+            "teacherName": "MS. MANOSHI MUKHERJEE",
+            "subjectRaw": "BENGALI"
+          },
+          {
+            "teacherName": "MS. RAMA MASIH",
+            "subjectRaw": "H.GRAMMAR"
+          }
+        ]
+      }
+    ],
+    "unresolvedCodes": [
+      {
+        "code": "XII",
+        "count": 25
+      },
+      {
+        "code": "XI",
+        "count": 17
+      },
+      {
+        "code": "IX",
+        "count": 3
+      },
+      {
+        "code": "",
+        "count": 4
+      },
+      {
+        "code": "VIIII A",
+        "count": 6
+      },
+      {
+        "code": "I - II",
+        "count": 2
+      }
+    ]
+  },
+  "teacherWiseSkippedBlocks": [],
+  "teacherRosterFromTeacherWiseSheet": [
+    "MR. ABHIJIT DAS",
+    "MR. AJAY PRASAD",
+    "MR. ALOKENATH GUPTA",
+    "MR. AMIT VISWAKARMA",
+    "MR. AMULYA MUKHERJEE",
+    "MR. CECIL FERGUSAN",
+    "MR. DEBPRIYA GANGULY",
+    "MR. DIBYODOY CHAKRABORTY",
+    "MR. JAYANTO DAS",
+    "MR. MUKUL BANERJEE",
+    "MR. RAMGOPAL KABIRAJ",
+    "MR. RUPENDU SINHA",
+    "MR. SUBIR BARAT",
+    "MR. TOUSHIF KHAN",
+    "MR. VIKASH MISHRA",
+    "MR.RAJESH PATHAK",
+    "MS. ANKITA ROY",
+    "MS. CATHERINE SYLVESTER",
+    "MS. DEBASHREE ROY",
+    "MS. DEBASHREE SENGUPTA",
+    "MS. FIRDAUS KHAN",
+    "MS. IPSHITA TIWARY",
+    "MS. LATA PILLAI",
+    "MS. LAXMI SINGH",
+    "MS. MANOSHI MUKHERJEE",
+    "MS. MINU CHATTERJEE",
+    "MS. NEHA SINGH",
+    "MS. NIDHI KUMARI",
+    "MS. NIDHI SINGH",
+    "MS. NISHI INDRA",
+    "MS. NISHITA DUTTA",
+    "MS. PALLABI MUKHERJEE",
+    "MS. PAYEL SALUJA",
+    "MS. PRIYANKA BANERJEE",
+    "MS. PRIYANKA GORAI",
+    "MS. RAMA MASIH",
+    "MS. RIMPY KAUR",
+    "MS. SANCHITA GOSWAMI",
+    "MS. SANCHITA KUNDU",
+    "MS. SANNU VICTOR",
+    "MS. SHARMILA WILLIAM",
+    "MS. SUTAPA BANERJEE",
+    "MS. SWAGATA GHOSH",
+    "MS. SWARNALI PALIT",
+    "MS. SWEETY DEY",
+    "MS.MANISHA PATRA",
+    "MS.RITA SEN",
+    "SR. SHANTA  BAXLA"
+  ],
+  "note": "teacher_id was left null on every timetable_entries row — create real accounts via /admin/teachers, then run the teacher-linking pass once emails exist."
+}
