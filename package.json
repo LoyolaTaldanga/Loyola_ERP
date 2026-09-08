@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "import:excel": "tsx scripts/import-excel.ts"
+    "import:excel": "tsx scripts/import-excel.ts",
+    "create:teachers": "tsx scripts/create-teacher-accounts.ts",
+    "populate:teacher-subjects": "tsx scripts/populate-teacher-subjects.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.6",
@@ -15,6 +17,7 @@
     "next": "15.5.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "resend": "^6.26.0",
     "server-only": "^0.0.1",
     "xlsx": "^0.18.5",
     "zod": "^3.24.1"

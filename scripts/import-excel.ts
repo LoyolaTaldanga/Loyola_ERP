@@ -17,7 +17,7 @@ import * as dotenv from "dotenv";
 import { createClient } from "@supabase/supabase-js";
 import type { Database } from "../src/lib/supabase/types";
 import { PERIOD_SLOTS, EXCEL_PERIOD_TO_SLOT } from "./import-lib/period-slots";
-import { normalizeSubject } from "./import-lib/subjects";
+import { normalizeSubject } from "../src/lib/subject-normalize";
 import { GRADE_ORDER, ClassCodeRegistry, parseClassLabel } from "./import-lib/class-codes";
 
 dotenv.config({ path: path.join(process.cwd(), ".env.local") });
@@ -310,7 +310,13 @@ async function main() {
   // --- 6. cross-validation against teacher-wise sheet -------------------------
   console.log("Cross-validating against Teacher-wise sheet...");
   const teacherCellIndex = new Map<string, { teacherName: string; subjectRaw: string }[]>();
-  const unresolvedCodes: { teacherName: string; codeRaw: string; day: number; period: number }[] = [];
+  const unresolvedCodes: {
+    teacherName: string;
+    codeRaw: string;
+    day: number;
+    period: number;
+    subjectRaw: string;
+  }[] = [];
 
   for (const cell of teacherWise.cells) {
     const keys = registry.decode(cell.codeRaw);
@@ -320,6 +326,7 @@ async function main() {
         codeRaw: cell.codeRaw,
         day: cell.dayOfWeek,
         period: cell.periodNumber,
+        subjectRaw: cell.subjectRaw,
       });
       continue;
     }
@@ -331,15 +338,28 @@ async function main() {
     }
   }
 
+  const confirmedMatches: Record<string, unknown>[] = [];
   const mismatches: Record<string, unknown>[] = [];
   const ambiguous: Record<string, unknown>[] = [];
-  let confirmed = 0;
   let unmatchedCount = 0;
+
+  // Tally which grade-band (Nursery-V vs VI-XII) each teacher-wise name shows
+  // up teaching, from every resolved match regardless of subject agreement —
+  // used downstream to best-effort-derive teachers.group when bulk-creating
+  // accounts (there's no direct "group" field anywhere in the source data).
+  const JUNIOR_GRADES = new Set(["Nursery", "LKG", "UKG", "I", "II", "III", "IV", "V"]);
+  const teacherGradeBandCounts = new Map<string, { junior: number; senior: number }>();
+  function tallyGradeBand(teacherName: string, className: string) {
+    const counts = teacherGradeBandCounts.get(teacherName) ?? { junior: 0, senior: 0 };
+    if (JUNIOR_GRADES.has(className)) counts.junior++;
+    else counts.senior++;
+    teacherGradeBandCounts.set(teacherName, counts);
+  }
 
   for (const cell of classWise.cells) {
     const classWiseNormalized = normalizeSubject(cell.subjectRaw);
     if (!classWiseNormalized) continue;
-    const registryEntry = { className: cell.className, stream: cell.stream, section: cell.section };
+    const sectionLabel = `${cell.className}${cell.stream ? ` (${cell.stream})` : ""} ${cell.section}`;
     const key = cell.stream
       ? `${cell.className}${cell.stream[0]}`
       : cell.className === "Nursery"
@@ -350,28 +370,50 @@ async function main() {
 
     if (matches.length === 0) {
       unmatchedCount++;
-    } else if (matches.length === 1) {
+      continue;
+    }
+    for (const m of matches) tallyGradeBand(m.teacherName, cell.className);
+
+    // Structured identifiers (className/stream/sectionName/dayOfWeek/periodNumber)
+    // let downstream tooling (the /admin/timetable teacher-linking utility)
+    // resolve these back to real section_id / period_slot_id rows without
+    // re-parsing the display label.
+    const identity = {
+      className: cell.className,
+      stream: cell.stream,
+      sectionName: cell.section,
+      dayOfWeek: cell.dayOfWeek,
+      periodNumber: cell.periodNumber,
+    };
+
+    if (matches.length === 1) {
       const teacherSubject = normalizeSubject(matches[0].subjectRaw);
       const isGenericPracticalMatch =
         classWiseNormalized.isPractical &&
         teacherSubject &&
         GENERIC_PRACTICAL_LABELS.has(teacherSubject.name);
       if ((teacherSubject && teacherSubject.name === classWiseNormalized.name) || isGenericPracticalMatch) {
-        confirmed++;
+        confirmedMatches.push({
+          ...identity,
+          section: sectionLabel,
+          subject: classWiseNormalized.name,
+          teacherName: matches[0].teacherName,
+        });
       } else {
         mismatches.push({
-          section: `${cell.className}${cell.stream ? ` (${cell.stream})` : ""} ${cell.section}`,
+          ...identity,
+          section: sectionLabel,
           day: cell.dayOfWeek,
           period: cell.periodNumber,
           classWiseSubject: classWiseNormalized.name,
           teacherWiseSubject: teacherSubject?.name ?? matches[0].subjectRaw,
           teacherName: matches[0].teacherName,
-          registryEntry,
         });
       }
     } else {
       ambiguous.push({
-        section: `${cell.className}${cell.stream ? ` (${cell.stream})` : ""} ${cell.section}`,
+        ...identity,
+        section: sectionLabel,
         day: cell.dayOfWeek,
         period: cell.periodNumber,
         classWiseSubject: classWiseNormalized.name,
@@ -394,21 +436,24 @@ async function main() {
     subjectsUpserted: subjectInserts.length,
     timetableEntriesUpserted: entryInserts.length,
     crossValidation: {
-      confirmed,
+      confirmed: confirmedMatches.length,
       unmatched: unmatchedCount,
+      confirmedMatches,
       mismatches,
       ambiguous,
       unresolvedCodes: [...unresolvedSummary.entries()].map(([code, count]) => ({ code, count })),
+      unresolvedCodeOccurrences: unresolvedCodes,
     },
     teacherWiseSkippedBlocks: teacherWise.skippedBlocks,
     teacherRosterFromTeacherWiseSheet: teacherWise.teacherNames,
-    note: "teacher_id was left null on every timetable_entries row — create real accounts via /admin/teachers, then run the teacher-linking pass once emails exist.",
+    teacherGradeBandCounts: Object.fromEntries(teacherGradeBandCounts),
+    note: "teacher_id was left null on every timetable_entries row — use the 'Link Teachers by Name' utility on /admin/timetable to fill it in from confirmedMatches/mismatches, and the ambiguous/unresolvedCodeOccurrences review lists for anything it can't decide automatically.",
   };
 
   fs.writeFileSync(REPORT_FILE, JSON.stringify(report, null, 2));
   console.log(`\nDone. Report written to ${path.relative(process.cwd(), REPORT_FILE)}`);
   console.log(
-    `Cross-validation: ${confirmed} confirmed, ${unmatchedCount} unmatched, ${mismatches.length} mismatches, ${ambiguous.length} ambiguous, ${unresolvedSummary.size} distinct unresolved codes.`
+    `Cross-validation: ${confirmedMatches.length} confirmed, ${unmatchedCount} unmatched, ${mismatches.length} mismatches, ${ambiguous.length} ambiguous, ${unresolvedSummary.size} distinct unresolved codes.`
   );
 }
 

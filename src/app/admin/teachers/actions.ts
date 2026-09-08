@@ -4,10 +4,12 @@ import { revalidatePath } from "next/cache";
 import { getCurrentUser } from "@/lib/auth/get-role";
 import { createAdminClient } from "@/lib/supabase/admin";
 import type { TeacherGroup } from "@/lib/supabase/types";
+import { generateUniqueUsername, syntheticEmailFor } from "@/lib/username";
+import { generateTempPassword } from "@/lib/password";
 
 export interface CreateTeacherState {
   error: string | null;
-  success: string | null;
+  credentials: { username: string; password: string } | null;
 }
 
 export async function createTeacher(
@@ -16,55 +18,112 @@ export async function createTeacher(
 ): Promise<CreateTeacherState> {
   const current = await getCurrentUser();
   if (!current || current.role !== "admin") {
-    return { error: "Not authorized.", success: null };
+    return { error: "Not authorized.", credentials: null };
   }
 
   const name = String(formData.get("name") ?? "").trim();
-  const email = String(formData.get("email") ?? "").trim().toLowerCase();
   const phone = String(formData.get("phone") ?? "").trim() || null;
   const group = String(formData.get("group") ?? "") as TeacherGroup;
 
-  if (!name || !email || (group !== "A" && group !== "B")) {
-    return { error: "Name, email, and group are required.", success: null };
+  if (!name || (group !== "A" && group !== "B")) {
+    return { error: "Name and group are required.", credentials: null };
   }
 
   const admin = createAdminClient();
 
+  const username = await generateUniqueUsername(name, async (candidate) => {
+    const { count } = await admin
+      .from("teachers")
+      .select("id", { count: "exact", head: true })
+      .eq("username", candidate);
+    return (count ?? 0) > 0;
+  });
+  const email = syntheticEmailFor(username);
+  const password = generateTempPassword();
+
   const { data: created, error: createError } = await admin.auth.admin.createUser({
     email,
+    password,
     email_confirm: true,
     app_metadata: { role: "teacher" },
   });
 
   if (createError || !created.user) {
-    return { error: createError?.message ?? "Could not create the auth account.", success: null };
+    return { error: createError?.message ?? "Could not create the auth account.", credentials: null };
   }
 
   const { error: insertError } = await admin.from("teachers").insert({
     id: created.user.id,
     name,
     email,
+    username,
     phone,
     group,
   });
 
   if (insertError) {
     await admin.auth.admin.deleteUser(created.user.id);
-    return { error: insertError.message, success: null };
-  }
-
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
-  const { error: inviteError } = await admin.auth.admin.inviteUserByEmail(email, {
-    redirectTo: `${siteUrl}/auth/confirm`,
-  });
-
-  if (inviteError) {
-    return {
-      error: null,
-      success: `Teacher created, but the invite email could not be sent (${inviteError.message}). Ask them to use "Forgot password" on the login page.`,
-    };
+    return { error: insertError.message, credentials: null };
   }
 
   revalidatePath("/admin/teachers");
-  return { error: null, success: `Invite sent to ${email}.` };
+  return { error: null, credentials: { username, password } };
+}
+
+export interface ResetPasswordState {
+  error: string | null;
+  password: string | null;
+  teacherName: string | null;
+}
+
+export async function resetTeacherPassword(
+  _prevState: ResetPasswordState,
+  formData: FormData
+): Promise<ResetPasswordState> {
+  const current = await getCurrentUser();
+  if (!current || current.role !== "admin") {
+    return { error: "Not authorized.", password: null, teacherName: null };
+  }
+
+  const teacherId = String(formData.get("teacherId") ?? "");
+  const teacherName = String(formData.get("teacherName") ?? "");
+  if (!teacherId) {
+    return { error: "Missing teacher.", password: null, teacherName: null };
+  }
+
+  const admin = createAdminClient();
+  const password = generateTempPassword();
+
+  const { error } = await admin.auth.admin.updateUserById(teacherId, { password });
+  if (error) {
+    return { error: error.message, password: null, teacherName: null };
+  }
+
+  return { error: null, password, teacherName };
+}
+
+export async function updateTeacherGroup(
+  teacherId: string,
+  group: TeacherGroup
+): Promise<{ error: string | null }> {
+  const current = await getCurrentUser();
+  if (!current || current.role !== "admin") {
+    return { error: "Not authorized." };
+  }
+  if (group !== "A" && group !== "B") {
+    return { error: "Invalid group." };
+  }
+
+  const admin = createAdminClient();
+  const { error } = await admin
+    .from("teachers")
+    .update({ group, group_needs_review: false })
+    .eq("id", teacherId);
+
+  if (error) {
+    return { error: error.message };
+  }
+
+  revalidatePath("/admin/teachers");
+  return { error: null };
 }

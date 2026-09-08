@@ -5,3 +5,5 @@ export const DAYS = [
   { value: 4, label: "Thursday" },
   { value: 5, label: "Friday" },
 ];
+
+export const DAY_ABBR: Record<number, string> = { 1: "Mon", 2: "Tue", 3: "Wed", 4: "Thu", 5: "Fri" };

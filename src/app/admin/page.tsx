@@ -1,30 +1,42 @@
-import Link from "next/link";
+import { createClient } from "@/lib/supabase/server";
+import { todayISO } from "@/lib/today";
+import { LiveClock } from "@/components/live-clock";
+import { StatCard } from "@/components/stat-card";
+import { AbsenteesBox } from "./absentees-box";
 
-const cards = [
-  { href: "/admin/timetable", title: "Timetable", desc: "View the master timetable by class & section." },
-  { href: "/admin/teachers", title: "Teachers", desc: "Create teacher accounts and manage subject assignments." },
-  { href: "/admin/absences", title: "Absences", desc: "Log and review teacher absences." },
-  { href: "/admin/substitutions", title: "Substitutions", desc: "Assign and track substitute teachers." },
-  { href: "/admin/rules", title: "Rules", desc: "Tune substitution assignment rules." },
-];
+export default async function AdminHomePage() {
+  const supabase = await createClient();
+  const today = todayISO();
 
-export default function AdminHomePage() {
+  const [{ count: teacherCount }, { count: classCount }, { count: sectionCount }, { count: absentCount }] =
+    await Promise.all([
+      supabase.from("teachers").select("*", { count: "exact", head: true }).eq("is_active", true),
+      supabase.from("classes").select("*", { count: "exact", head: true }),
+      supabase.from("sections").select("*", { count: "exact", head: true }),
+      supabase.from("teacher_absences").select("*", { count: "exact", head: true }).eq("date", today),
+    ]);
+
   return (
     <div>
-      <h1 className="text-2xl font-semibold text-brand-primary">Admin Dashboard</h1>
-      <p className="mt-1 text-sm text-brand-neutral">Loyola School, Taldanga — Timetable & Substitution Management</p>
+      <div className="flex items-start justify-between">
+        <div>
+          <h1 className="text-2xl font-semibold text-brand-primary">Admin Dashboard</h1>
+          <p className="mt-1 text-sm text-brand-neutral">
+            Loyola School, Taldanga — Timetable &amp; Substitution Management
+          </p>
+        </div>
+        <LiveClock />
+      </div>
 
-      <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {cards.map((card) => (
-          <Link
-            key={card.href}
-            href={card.href}
-            className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm transition hover:border-brand-secondary hover:shadow-md"
-          >
-            <h2 className="font-semibold text-brand-primary">{card.title}</h2>
-            <p className="mt-1 text-sm text-slate-500">{card.desc}</p>
-          </Link>
-        ))}
+      <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <StatCard label="Active Teachers" value={teacherCount ?? 0} />
+        <StatCard label="Classes" value={classCount ?? 0} />
+        <StatCard label="Sections" value={sectionCount ?? 0} />
+        <StatCard label="Absent Today" value={absentCount ?? 0} />
+      </div>
+
+      <div className="mt-8">
+        <AbsenteesBox />
       </div>
     </div>
   );

@@ -2,6 +2,7 @@
 
 import { useActionState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { login, type LoginState } from "./actions";
 
 const initialState: LoginState = { error: null };
@@ -22,15 +23,15 @@ export default function LoginPage() {
 
         <form action={formAction} className="flex flex-col gap-4">
           <div className="flex flex-col gap-1">
-            <label htmlFor="email" className="text-sm font-medium text-slate-700">
-              Email
+            <label htmlFor="userId" className="text-sm font-medium text-slate-700">
+              User ID
             </label>
             <input
-              id="email"
-              name="email"
-              type="email"
+              id="userId"
+              name="userId"
               required
-              autoComplete="email"
+              autoComplete="username"
+              placeholder="e.g. nidhi.singh"
               className="rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-brand-primary focus:ring-1 focus:ring-brand-primary"
             />
           </div>
@@ -60,7 +61,13 @@ export default function LoginPage() {
           </button>
         </form>
 
-        <p className="mt-6 text-center text-xs text-slate-400">
+        <div className="mt-4 text-center">
+          <Link href="/login/forgot-password" className="text-xs text-brand-primary hover:underline">
+            Forgot password?
+          </Link>
+        </div>
+
+        <p className="mt-4 text-center text-xs text-slate-400">
           Accounts are created by the Principal. Contact the school office if you need access.
         </p>
       </div>

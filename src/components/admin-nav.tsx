@@ -4,11 +4,13 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const links = [
+  { href: "/admin", label: "Dashboard", exact: true },
   { href: "/admin/timetable", label: "Timetable" },
   { href: "/admin/teachers", label: "Teachers" },
   { href: "/admin/absences", label: "Absences" },
   { href: "/admin/substitutions", label: "Substitutions" },
   { href: "/admin/rules", label: "Rules" },
+  { href: "/admin/import-report", label: "Import Report" },
 ];
 
 export function AdminNav() {
@@ -17,7 +19,7 @@ export function AdminNav() {
   return (
     <nav className="flex flex-col gap-1">
       {links.map((link) => {
-        const active = pathname.startsWith(link.href);
+        const active = link.exact ? pathname === link.href : pathname.startsWith(link.href);
         return (
           <Link
             key={link.href}

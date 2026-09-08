@@ -2,19 +2,39 @@ import { type EmailOtpType } from "@supabase/supabase-js";
 import { redirect } from "next/navigation";
 import { type NextRequest } from "next/server";
 import { createClient } from "@/lib/supabase/server";
+import { createAdminClient } from "@/lib/supabase/admin";
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const token_hash = searchParams.get("token_hash");
   const type = searchParams.get("type") as EmailOtpType | null;
 
-  if (token_hash && type) {
-    const supabase = await createClient();
-    const { error } = await supabase.auth.verifyOtp({ type, token_hash });
-    if (!error) {
-      redirect("/auth/update-password");
-    }
+  if (!token_hash || !type) {
+    redirect("/login?error=invite-link-invalid");
   }
 
-  redirect("/login?error=invite-link-invalid");
+  const supabase = await createClient();
+  const { error } = await supabase.auth.verifyOtp({ type, token_hash });
+  if (error) {
+    redirect("/login?error=invite-link-invalid");
+  }
+
+  if (type === "email_change") {
+    // The teacher just confirmed a personal email — Supabase has already
+    // swapped it in as the auth user's email; mirror that onto `teachers`
+    // so username-based login resolves to the right address going forward.
+    const {
+      data: { user },
+    } = await supabase.auth.getUser();
+    if (user?.email) {
+      const admin = createAdminClient();
+      await admin
+        .from("teachers")
+        .update({ email: user.email, real_email: user.email, real_email_verified: true })
+        .eq("id", user.id);
+    }
+    redirect("/dashboard/settings?verified=1");
+  }
+
+  redirect("/auth/update-password");
 }

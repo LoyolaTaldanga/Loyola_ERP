@@ -4,6 +4,10 @@
 // `subjects` rows for the same subject, while leaving genuinely distinct
 // fine-grained labels (e.g. per-language reading/writing/vocabulary drills)
 // alone rather than guessing they're the same thing.
+//
+// Shared between scripts/import-excel.ts (initial import) and the
+// /admin/timetable server actions (applying a resolved unresolved-code fix,
+// which re-derives a subject from the same raw Excel text).
 
 // Exact-match corrections for known typos / punctuation variants observed
 // in the source files (keys are post-whitespace-collapse, uppercased).
@@ -23,6 +27,7 @@ const TYPO_FIXES: Record<string, string> = {
   "HIN 3 L": "HIN 3L",
   "POL. SCIENCE": "POLITICAL SCIENCE",
   "POL.SC": "POLITICAL SCIENCE",
+  "POL. SC": "POLITICAL SCIENCE",
   "POL SC": "POLITICAL SCIENCE",
 };
 

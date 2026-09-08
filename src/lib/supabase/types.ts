@@ -41,9 +41,13 @@ export type Teacher = {
   id: string;
   name: string;
   email: string;
+  username: string;
+  real_email: string | null;
+  real_email_verified: boolean;
   phone: string | null;
   is_active: boolean;
   group: TeacherGroup;
+  group_needs_review: boolean;
   created_at: string;
   updated_at: string;
 }
@@ -103,6 +107,7 @@ export type Substitution = {
   status: SubstitutionStatus;
   created_by: string | null;
   notified_at: string | null;
+  note: string | null;
   created_at: string;
   updated_at: string;
 }
