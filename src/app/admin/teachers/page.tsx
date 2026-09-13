@@ -1,15 +1,17 @@
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
+import { getDefaultLeaveQuota } from "@/lib/leave-quota";
 import { TeacherForm } from "./teacher-form";
 import { ResetPasswordButton } from "./reset-password-button";
 import { GroupSelect } from "./group-select";
+import { LeaveQuotaOverrideInput } from "./leave-quota-override-input";
 
 export default async function TeachersPage() {
   const supabase = await createClient();
-  const { data: teachers } = await supabase
-    .from("teachers")
-    .select("*")
-    .order("name", { ascending: true });
+  const [{ data: teachers }, defaultQuota] = await Promise.all([
+    supabase.from("teachers").select("*").order("name", { ascending: true }),
+    getDefaultLeaveQuota(supabase),
+  ]);
 
   const needsReviewCount = teachers?.filter((t) => t.group_needs_review).length ?? 0;
 
@@ -42,6 +44,7 @@ export default async function TeachersPage() {
               <th className="px-4 py-3 font-medium">Real email</th>
               <th className="px-4 py-3 font-medium">Phone</th>
               <th className="px-4 py-3 font-medium">Group</th>
+              <th className="px-4 py-3 font-medium">Leave Quota</th>
               <th className="px-4 py-3 font-medium">Status</th>
               <th className="px-4 py-3 font-medium">Actions</th>
             </tr>
@@ -76,6 +79,13 @@ export default async function TeachersPage() {
                   />
                 </td>
                 <td className="px-4 py-3">
+                  <LeaveQuotaOverrideInput
+                    teacherId={teacher.id}
+                    initialValue={teacher.leave_quota_override}
+                    defaultQuota={defaultQuota}
+                  />
+                </td>
+                <td className="px-4 py-3">
                   <span
                     className={`rounded-full px-2 py-0.5 text-xs font-medium ${
                       teacher.is_active
@@ -93,7 +103,7 @@ export default async function TeachersPage() {
             ))}
             {!teachers?.length && (
               <tr>
-                <td colSpan={7} className="px-4 py-8 text-center text-slate-400">
+                <td colSpan={8} className="px-4 py-8 text-center text-slate-400">
                   No teachers yet.
                 </td>
               </tr>

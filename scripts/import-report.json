@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-08T09:12:25.204Z",
+  "generatedAt": "2026-09-13T15:18:30.902Z",
   "classesUpserted": 19,
   "sectionsUpserted": 51,
-  "subjectsUpserted": 80,
-  "timetableEntriesUpserted": 1900,
+  "subjectsUpserted": 90,
+  "timetableEntriesUpserted": 2212,
   "crossValidation": {
-    "confirmed": 1308,
-    "unmatched": 481,
+    "confirmed": 1568,
+    "unmatched": 512,
     "confirmedMatches": [
       {
         "className": "XII",
@@ -573,6 +573,16 @@
         "stream": null,
         "sectionName": "A",
         "dayOfWeek": 1,
+        "periodNumber": 5,
+        "section": "X A",
+        "subject": "BIOLOGY",
+        "teacherName": "MR. TANMOY CHATTERJEE"
+      },
+      {
+        "className": "X",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 1,
         "periodNumber": 6,
         "section": "X A",
         "subject": "E.LIT",
@@ -722,11 +732,31 @@
         "className": "X",
         "stream": null,
         "sectionName": "A",
+        "dayOfWeek": 3,
+        "periodNumber": 8,
+        "section": "X A",
+        "subject": "BIOLOGY",
+        "teacherName": "MR. TANMOY CHATTERJEE"
+      },
+      {
+        "className": "X",
+        "stream": null,
+        "sectionName": "A",
         "dayOfWeek": 4,
         "periodNumber": 1,
         "section": "X A",
         "subject": "PHYSICS",
         "teacherName": "MR.RAJESH PATHAK"
+      },
+      {
+        "className": "X",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 4,
+        "periodNumber": 2,
+        "section": "X A",
+        "subject": "BIOLOGY",
+        "teacherName": "MR. TANMOY CHATTERJEE"
       },
       {
         "className": "X",
@@ -871,6 +901,76 @@
       {
         "className": "X",
         "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "X A",
+        "subject": "HIST-CIV",
+        "teacherName": "MS. RIMPY KAUR"
+      },
+      {
+        "className": "X",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "X A",
+        "subject": "MATHS",
+        "teacherName": "MR.RAJESH PATHAK"
+      },
+      {
+        "className": "X",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "X A",
+        "subject": "CHEMISTRY",
+        "teacherName": "MS. NIDHI SINGH"
+      },
+      {
+        "className": "X",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "X A",
+        "subject": "BIOLOGY",
+        "teacherName": "MR. TANMOY CHATTERJEE"
+      },
+      {
+        "className": "X",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "X A",
+        "subject": "GEOGRAPHY",
+        "teacherName": "MR. RUPENDU SINHA"
+      },
+      {
+        "className": "X",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "X A",
+        "subject": "MATHS",
+        "teacherName": "MR.RAJESH PATHAK"
+      },
+      {
+        "className": "X",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "X A",
+        "subject": "PHYSICS",
+        "teacherName": "MR.RAJESH PATHAK"
+      },
+      {
+        "className": "X",
+        "stream": null,
         "sectionName": "B",
         "dayOfWeek": 1,
         "periodNumber": 1,
@@ -1211,6 +1311,76 @@
       {
         "className": "X",
         "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "X B",
+        "subject": "CHEMISTRY",
+        "teacherName": "MR. ALOKENATH GUPTA"
+      },
+      {
+        "className": "X",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "X B",
+        "subject": "MATHS",
+        "teacherName": "MS. NIDHI KUMARI"
+      },
+      {
+        "className": "X",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "X B",
+        "subject": "PHYSICS",
+        "teacherName": "MR. AMIT VISWAKARMA"
+      },
+      {
+        "className": "X",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "X B",
+        "subject": "MATHS",
+        "teacherName": "MS. NIDHI KUMARI"
+      },
+      {
+        "className": "X",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "X B",
+        "subject": "BIOLOGY",
+        "teacherName": "MS. SWARNALI PALIT"
+      },
+      {
+        "className": "X",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "X B",
+        "subject": "GEOGRAPHY",
+        "teacherName": "MR. RUPENDU SINHA"
+      },
+      {
+        "className": "X",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "X B",
+        "subject": "ENGLISH",
+        "teacherName": "MR. CECIL FERGUSAN"
+      },
+      {
+        "className": "X",
+        "stream": null,
         "sectionName": "C",
         "dayOfWeek": 1,
         "periodNumber": 1,
@@ -1467,6 +1637,66 @@
         "section": "X C",
         "subject": "E.LIT",
         "teacherName": "MS.RITA SEN"
+      },
+      {
+        "className": "X",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "X C",
+        "subject": "CHEMISTRY",
+        "teacherName": "MR. ABHIJIT DAS"
+      },
+      {
+        "className": "X",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "X C",
+        "subject": "PHYSICS",
+        "teacherName": "MR. AMIT VISWAKARMA"
+      },
+      {
+        "className": "X",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "X C",
+        "subject": "ENGLISH",
+        "teacherName": "MR. CECIL FERGUSAN"
+      },
+      {
+        "className": "X",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "X C",
+        "subject": "MATHS",
+        "teacherName": "MR. MUKUL BANERJEE"
+      },
+      {
+        "className": "X",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "X C",
+        "subject": "BIOLOGY",
+        "teacherName": "MS. SWARNALI PALIT"
+      },
+      {
+        "className": "X",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "X C",
+        "subject": "MATHS",
+        "teacherName": "MR. MUKUL BANERJEE"
       },
       {
         "className": "IX",
@@ -1801,12 +2031,92 @@
       {
         "className": "IX",
         "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "IX A",
+        "subject": "HIST-CIV",
+        "teacherName": "MR. DEBPRIYA GANGULY"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "IX A",
+        "subject": "MATHS",
+        "teacherName": "MS. NIDHI KUMARI"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "IX A",
+        "subject": "PHYSICS",
+        "teacherName": "MR. AMIT VISWAKARMA"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "IX A",
+        "subject": "CHEMISTRY",
+        "teacherName": "MR. ABHIJIT DAS"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "IX A",
+        "subject": "BIOLOGY",
+        "teacherName": "MS. SWARNALI PALIT"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "IX A",
+        "subject": "ENGLISH",
+        "teacherName": "MS. SWEETY DEY"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 1,
+        "periodNumber": 1,
+        "section": "IX B",
+        "subject": "MATHS",
+        "teacherName": "MR. TANMOY CHATTERJEE"
+      },
+      {
+        "className": "IX",
+        "stream": null,
         "sectionName": "B",
         "dayOfWeek": 1,
         "periodNumber": 2,
         "section": "IX B",
         "subject": "HIST-CIV",
         "teacherName": "MS. SANCHITA KUNDU"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 1,
+        "periodNumber": 3,
+        "section": "IX B",
+        "subject": "BIOLOGY",
+        "teacherName": "MR. TANMOY CHATTERJEE"
       },
       {
         "className": "IX",
@@ -1843,10 +2153,30 @@
         "stream": null,
         "sectionName": "B",
         "dayOfWeek": 2,
+        "periodNumber": 1,
+        "section": "IX B",
+        "subject": "VALUE EDUCATION",
+        "teacherName": "MR. TANMOY CHATTERJEE"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 2,
         "periodNumber": 2,
         "section": "IX B",
         "subject": "E.LIT",
         "teacherName": "MS.RITA SEN"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 2,
+        "periodNumber": 3,
+        "section": "IX B",
+        "subject": "MATHS",
+        "teacherName": "MR. TANMOY CHATTERJEE"
       },
       {
         "className": "IX",
@@ -1867,6 +2197,16 @@
         "section": "IX B",
         "subject": "PHYSICS",
         "teacherName": "MR. JAYANTO DAS"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 3,
+        "periodNumber": 1,
+        "section": "IX B",
+        "subject": "MATHS",
+        "teacherName": "MR. TANMOY CHATTERJEE"
       },
       {
         "className": "IX",
@@ -1913,10 +2253,30 @@
         "stream": null,
         "sectionName": "B",
         "dayOfWeek": 4,
+        "periodNumber": 1,
+        "section": "IX B",
+        "subject": "MATHS",
+        "teacherName": "MR. TANMOY CHATTERJEE"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 4,
         "periodNumber": 2,
         "section": "IX B",
         "subject": "HIST-CIV",
         "teacherName": "MS. SANCHITA KUNDU"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 4,
+        "periodNumber": 3,
+        "section": "IX B",
+        "subject": "BIOLOGY",
+        "teacherName": "MR. TANMOY CHATTERJEE"
       },
       {
         "className": "IX",
@@ -1963,6 +2323,16 @@
         "stream": null,
         "sectionName": "B",
         "dayOfWeek": 5,
+        "periodNumber": 3,
+        "section": "IX B",
+        "subject": "MATHS",
+        "teacherName": "MR. TANMOY CHATTERJEE"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 5,
         "periodNumber": 5,
         "section": "IX B",
         "subject": "GEOGRAPHY",
@@ -1977,6 +2347,86 @@
         "section": "IX B",
         "subject": "E.LIT",
         "teacherName": "MS.RITA SEN"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 5,
+        "periodNumber": 8,
+        "section": "IX B",
+        "subject": "VALUE EDUCATION",
+        "teacherName": "MR. TANMOY CHATTERJEE"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "IX B",
+        "subject": "BIOLOGY",
+        "teacherName": "MR. TANMOY CHATTERJEE"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "IX B",
+        "subject": "ENGLISH",
+        "teacherName": "MR. CECIL FERGUSAN"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "IX B",
+        "subject": "GEOGRAPHY",
+        "teacherName": "MR. RUPENDU SINHA"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "IX B",
+        "subject": "HIST-CIV",
+        "teacherName": "MS. RIMPY KAUR"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "IX B",
+        "subject": "CHEMISTRY",
+        "teacherName": "MR. VIKASH MISHRA"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "IX B",
+        "subject": "PHYSICS",
+        "teacherName": "MR. JAYANTO DAS"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "IX B",
+        "subject": "MATHS",
+        "teacherName": "MR. TANMOY CHATTERJEE"
       },
       {
         "className": "IX",
@@ -2251,6 +2701,66 @@
       {
         "className": "IX",
         "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "IX C",
+        "subject": "BIOLOGY",
+        "teacherName": "MR. MUKUL BANERJEE"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "IX C",
+        "subject": "GEOGRAPHY",
+        "teacherName": "MR. RUPENDU SINHA"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "IX C",
+        "subject": "CHEMISTRY",
+        "teacherName": "MR. ALOKENATH GUPTA"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "IX C",
+        "subject": "ENGLISH",
+        "teacherName": "MS. SWEETY DEY"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "IX C",
+        "subject": "PHYSICS",
+        "teacherName": "MR.RAJESH PATHAK"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "IX C",
+        "subject": "MATHS",
+        "teacherName": "MR. MUKUL BANERJEE"
+      },
+      {
+        "className": "IX",
+        "stream": null,
         "sectionName": "D",
         "dayOfWeek": 1,
         "periodNumber": 1,
@@ -2297,6 +2807,16 @@
         "section": "IX D",
         "subject": "HIST-CIV",
         "teacherName": "MS. RIMPY KAUR"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 1,
+        "periodNumber": 7,
+        "section": "IX D",
+        "subject": "BIOLOGY",
+        "teacherName": "MR. TANMOY CHATTERJEE"
       },
       {
         "className": "IX",
@@ -2367,6 +2887,16 @@
         "section": "IX D",
         "subject": "MATHS",
         "teacherName": "MR. AJAY PRASAD"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 3,
+        "periodNumber": 2,
+        "section": "IX D",
+        "subject": "BIOLOGY",
+        "teacherName": "MR. TANMOY CHATTERJEE"
       },
       {
         "className": "IX",
@@ -2513,9 +3043,79 @@
         "stream": null,
         "sectionName": "D",
         "dayOfWeek": 5,
+        "periodNumber": 7,
+        "section": "IX D",
+        "subject": "BIOLOGY",
+        "teacherName": "MR. TANMOY CHATTERJEE"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 5,
         "periodNumber": 8,
         "section": "IX D",
         "subject": "VALUE EDUCATION",
+        "teacherName": "MR. AJAY PRASAD"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "IX D",
+        "subject": "CHEMISTRY",
+        "teacherName": "MS. NIDHI SINGH"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "IX D",
+        "subject": "PHYSICS",
+        "teacherName": "MR.RAJESH PATHAK"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "IX D",
+        "subject": "ENGLISH",
+        "teacherName": "MR. CECIL FERGUSAN"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "IX D",
+        "subject": "BIOLOGY",
+        "teacherName": "MR. TANMOY CHATTERJEE"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "IX D",
+        "subject": "HIST-CIV",
+        "teacherName": "MS. RIMPY KAUR"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "IX D",
+        "subject": "MATHS",
         "teacherName": "MR. AJAY PRASAD"
       },
       {
@@ -2791,6 +3391,86 @@
       {
         "className": "VIII",
         "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "VIII A",
+        "subject": "PHYSICS",
+        "teacherName": "MR.RAJESH PATHAK"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "VIII A",
+        "subject": "HIST-CIV",
+        "teacherName": "MR. DEBPRIYA GANGULY"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "VIII A",
+        "subject": "GAMES",
+        "teacherName": "MR. AMULYA MUKHERJEE"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "VIII A",
+        "subject": "GEOGRAPHY",
+        "teacherName": "MR. RUPENDU SINHA"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "VIII A",
+        "subject": "CHEMISTRY",
+        "teacherName": "MS. NIDHI SINGH"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "VIII A",
+        "subject": "MATHS",
+        "teacherName": "MR. MUKUL BANERJEE"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "VIII A",
+        "subject": "BIOLOGY",
+        "teacherName": "MS. PAYEL SALUJA"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "VIII A",
+        "subject": "E.APPLICATION",
+        "teacherName": "MS. PALLABI MUKHERJEE"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
         "sectionName": "B",
         "dayOfWeek": 1,
         "periodNumber": 4,
@@ -3046,6 +3726,66 @@
         "periodNumber": 8,
         "section": "VIII B",
         "subject": "VALUE EDUCATION",
+        "teacherName": "MS. RIMPY KAUR"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "VIII B",
+        "subject": "PHYSICS",
+        "teacherName": "MR. MUKUL BANERJEE"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "VIII B",
+        "subject": "HIST-CIV",
+        "teacherName": "MS. RIMPY KAUR"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "VIII B",
+        "subject": "GEOGRAPHY",
+        "teacherName": "MS. SANCHITA GOSWAMI"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "VIII B",
+        "subject": "CHEMISTRY",
+        "teacherName": "MR. ALOKENATH GUPTA"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "VIII B",
+        "subject": "BIOLOGY",
+        "teacherName": "MS. SUTAPA BANERJEE"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "VIII B",
+        "subject": "E.APPLICATION",
         "teacherName": "MS. RIMPY KAUR"
       },
       {
@@ -3331,6 +4071,86 @@
       {
         "className": "VIII",
         "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "VIII C",
+        "subject": "GEOGRAPHY",
+        "teacherName": "MR. RUPENDU SINHA"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "VIII C",
+        "subject": "E.APPLICATION",
+        "teacherName": "MS. SWEETY DEY"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "VIII C",
+        "subject": "MATHS",
+        "teacherName": "MR. AMIT VISWAKARMA"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "VIII C",
+        "subject": "CHEMISTRY",
+        "teacherName": "MR. VIKASH MISHRA"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "VIII C",
+        "subject": "GAMES",
+        "teacherName": "MR. AMULYA MUKHERJEE"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "VIII C",
+        "subject": "HIST-CIV",
+        "teacherName": "MS. LATA PILLAI"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "VIII C",
+        "subject": "BIOLOGY",
+        "teacherName": "MS. MANOSHI MUKHERJEE"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "VIII C",
+        "subject": "PHYSICS",
+        "teacherName": "MR. AMIT VISWAKARMA"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
         "sectionName": "D",
         "dayOfWeek": 1,
         "periodNumber": 2,
@@ -3433,6 +4253,16 @@
         "stream": null,
         "sectionName": "D",
         "dayOfWeek": 2,
+        "periodNumber": 5,
+        "section": "VIII D",
+        "subject": "BIOLOGY",
+        "teacherName": "MR. TANMOY CHATTERJEE"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 2,
         "periodNumber": 8,
         "section": "VIII D",
         "subject": "CONVERSATION",
@@ -3507,6 +4337,16 @@
         "section": "VIII D",
         "subject": "H.STORY",
         "teacherName": "MR. TOUSHIF KHAN"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 4,
+        "periodNumber": 4,
+        "section": "VIII D",
+        "subject": "BIOLOGY",
+        "teacherName": "MR. TANMOY CHATTERJEE"
       },
       {
         "className": "VIII",
@@ -3607,6 +4447,66 @@
         "section": "VIII D",
         "subject": "VALUE EDUCATION",
         "teacherName": "MS. NIDHI SINGH"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "VIII D",
+        "subject": "MATHS",
+        "teacherName": "MS. NIDHI KUMARI"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "VIII D",
+        "subject": "BIOLOGY",
+        "teacherName": "MR. TANMOY CHATTERJEE"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "VIII D",
+        "subject": "CHEMISTRY",
+        "teacherName": "MR. ABHIJIT DAS"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "VIII D",
+        "subject": "E.APPLICATION",
+        "teacherName": "MR. CECIL FERGUSAN"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "VIII D",
+        "subject": "GEOGRAPHY",
+        "teacherName": "MS. SANCHITA GOSWAMI"
+      },
+      {
+        "className": "VIII",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "VIII D",
+        "subject": "PHYSICS",
+        "teacherName": "MR. JAYANTO DAS"
       },
       {
         "className": "VII",
@@ -3783,6 +4683,16 @@
         "stream": null,
         "sectionName": "A",
         "dayOfWeek": 3,
+        "periodNumber": 4,
+        "section": "VII A",
+        "subject": "BIOLOGY",
+        "teacherName": "MR. TANMOY CHATTERJEE"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 3,
         "periodNumber": 6,
         "section": "VII A",
         "subject": "PHYSICS",
@@ -3857,6 +4767,16 @@
         "section": "VII A",
         "subject": "MATHS",
         "teacherName": "MS. NIDHI KUMARI"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 4,
+        "periodNumber": 7,
+        "section": "VII A",
+        "subject": "BIOLOGY",
+        "teacherName": "MR. TANMOY CHATTERJEE"
       },
       {
         "className": "VII",
@@ -3931,6 +4851,86 @@
       {
         "className": "VII",
         "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "VII A",
+        "subject": "COMPUTER",
+        "teacherName": "MR. AJAY PRASAD"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "VII A",
+        "subject": "CHEMISTRY",
+        "teacherName": "MR. VIKASH MISHRA"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "VII A",
+        "subject": "GEOGRAPHY",
+        "teacherName": "MS. SANCHITA GOSWAMI"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "VII A",
+        "subject": "E.APPLICATION",
+        "teacherName": "MS. PALLABI MUKHERJEE"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "VII A",
+        "subject": "HIST-CIV",
+        "teacherName": "MR. DEBPRIYA GANGULY"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "VII A",
+        "subject": "MATHS",
+        "teacherName": "MS. NIDHI KUMARI"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "VII A",
+        "subject": "BIOLOGY",
+        "teacherName": "MR. TANMOY CHATTERJEE"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "VII A",
+        "subject": "PHYSICS",
+        "teacherName": "MS. SUTAPA BANERJEE"
+      },
+      {
+        "className": "VII",
+        "stream": null,
         "sectionName": "B",
         "dayOfWeek": 1,
         "periodNumber": 1,
@@ -4181,6 +5181,76 @@
       {
         "className": "VII",
         "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "VII B",
+        "subject": "CHEMISTRY",
+        "teacherName": "MR. VIKASH MISHRA"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "VII B",
+        "subject": "BIOLOGY",
+        "teacherName": "MS. SUTAPA BANERJEE"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "VII B",
+        "subject": "COMPUTER",
+        "teacherName": "MR. SUBIR BARAT"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "VII B",
+        "subject": "E.APPLICATION",
+        "teacherName": "MS. DEBASHREE ROY"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "VII B",
+        "subject": "HIST-CIV",
+        "teacherName": "MS. CATHERINE SYLVESTER"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "VII B",
+        "subject": "GEOGRAPHY",
+        "teacherName": "MR. RUPENDU SINHA"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "VII B",
+        "subject": "PHYSICS",
+        "teacherName": "MS. NIDHI SINGH"
+      },
+      {
+        "className": "VII",
+        "stream": null,
         "sectionName": "C",
         "dayOfWeek": 1,
         "periodNumber": 3,
@@ -4227,6 +5297,16 @@
         "section": "VII C",
         "subject": "MATHS",
         "teacherName": "MR. ABHIJIT DAS"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 1,
+        "periodNumber": 8,
+        "section": "VII C",
+        "subject": "BIOLOGY",
+        "teacherName": "MR. TANMOY CHATTERJEE"
       },
       {
         "className": "VII",
@@ -4423,6 +5503,16 @@
         "stream": null,
         "sectionName": "C",
         "dayOfWeek": 5,
+        "periodNumber": 5,
+        "section": "VII C",
+        "subject": "BIOLOGY",
+        "teacherName": "MR. TANMOY CHATTERJEE"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 5,
         "periodNumber": 7,
         "section": "VII C",
         "subject": "G.K.",
@@ -4437,6 +5527,86 @@
         "section": "VII C",
         "subject": "VALUE EDUCATION",
         "teacherName": "MS. LATA PILLAI"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "VII C",
+        "subject": "E.LANG",
+        "teacherName": "MS. LATA PILLAI"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "VII C",
+        "subject": "HIST-CIV",
+        "teacherName": "MS. RIMPY KAUR"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "VII C",
+        "subject": "COMPUTER",
+        "teacherName": "MR. AJAY PRASAD"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "VII C",
+        "subject": "GEOGRAPHY",
+        "teacherName": "MS. LATA PILLAI"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "VII C",
+        "subject": "E.APPLICATION",
+        "teacherName": "MS. SWEETY DEY"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "VII C",
+        "subject": "BIOLOGY",
+        "teacherName": "MR. TANMOY CHATTERJEE"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "VII C",
+        "subject": "CHEMISTRY",
+        "teacherName": "MR. ABHIJIT DAS"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "VII C",
+        "subject": "MATHS",
+        "teacherName": "MR. ABHIJIT DAS"
       },
       {
         "className": "VII",
@@ -4709,6 +5879,56 @@
         "teacherName": "MR. ALOKENATH GUPTA"
       },
       {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "VII D",
+        "subject": "COMPUTER",
+        "teacherName": "MR. RAMGOPAL KABIRAJ"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "VII D",
+        "subject": "CHEMISTRY",
+        "teacherName": "MR. ALOKENATH GUPTA"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "VII D",
+        "subject": "GEOGRAPHY",
+        "teacherName": "MS. CATHERINE SYLVESTER"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "VII D",
+        "subject": "PHYSICS",
+        "teacherName": "MR. AMIT VISWAKARMA"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "VII D",
+        "subject": "HIST-CIV",
+        "teacherName": "MR. DEBPRIYA GANGULY"
+      },
+      {
         "className": "VI",
         "stream": null,
         "sectionName": "A",
@@ -5011,6 +6231,76 @@
       {
         "className": "VI",
         "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "VI A",
+        "subject": "HIST-CIV",
+        "teacherName": "MS. PAYEL SALUJA"
+      },
+      {
+        "className": "VI",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "VI A",
+        "subject": "BIOLOGY",
+        "teacherName": "MS. PAYEL SALUJA"
+      },
+      {
+        "className": "VI",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "VI A",
+        "subject": "MATHS",
+        "teacherName": "MR. AMULYA MUKHERJEE"
+      },
+      {
+        "className": "VI",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "VI A",
+        "subject": "PHYSICS",
+        "teacherName": "MR. VIKASH MISHRA"
+      },
+      {
+        "className": "VI",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "VI A",
+        "subject": "COMPUTER",
+        "teacherName": "MR. SUBIR BARAT"
+      },
+      {
+        "className": "VI",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "VI A",
+        "subject": "GEOGRAPHY",
+        "teacherName": "MS. CATHERINE SYLVESTER"
+      },
+      {
+        "className": "VI",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "VI A",
+        "subject": "E.APPLICATION",
+        "teacherName": "MS. PAYEL SALUJA"
+      },
+      {
+        "className": "VI",
+        "stream": null,
         "sectionName": "B",
         "dayOfWeek": 1,
         "periodNumber": 1,
@@ -5296,6 +6586,86 @@
         "periodNumber": 8,
         "section": "VI B",
         "subject": "VALUE EDUCATION",
+        "teacherName": "MR. VIKASH MISHRA"
+      },
+      {
+        "className": "VI",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "VI B",
+        "subject": "BIOLOGY",
+        "teacherName": "MS. NIDHI SINGH"
+      },
+      {
+        "className": "VI",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "VI B",
+        "subject": "COMPUTER",
+        "teacherName": "MR. RAMGOPAL KABIRAJ"
+      },
+      {
+        "className": "VI",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "VI B",
+        "subject": "E.APPLICATION",
+        "teacherName": "MS. PAYEL SALUJA"
+      },
+      {
+        "className": "VI",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "VI B",
+        "subject": "PHYSICS",
+        "teacherName": "MS. SUTAPA BANERJEE"
+      },
+      {
+        "className": "VI",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "VI B",
+        "subject": "HIST-CIV",
+        "teacherName": "MS. RIMPY KAUR"
+      },
+      {
+        "className": "VI",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "VI B",
+        "subject": "GEOGRAPHY",
+        "teacherName": "MS. SANCHITA GOSWAMI"
+      },
+      {
+        "className": "VI",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "VI B",
+        "subject": "MATHS",
+        "teacherName": "MR. VIKASH MISHRA"
+      },
+      {
+        "className": "VI",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "VI B",
+        "subject": "CHEMISTRY",
         "teacherName": "MR. VIKASH MISHRA"
       },
       {
@@ -5577,6 +6947,76 @@
         "section": "VI C",
         "subject": "VALUE EDUCATION",
         "teacherName": "MS. SUTAPA BANERJEE"
+      },
+      {
+        "className": "VI",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "VI C",
+        "subject": "CHEMISTRY",
+        "teacherName": "MS. SUTAPA BANERJEE"
+      },
+      {
+        "className": "VI",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "VI C",
+        "subject": "HIST-CIV",
+        "teacherName": "MS. LATA PILLAI"
+      },
+      {
+        "className": "VI",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "VI C",
+        "subject": "E.APPLICATION",
+        "teacherName": "MS. LATA PILLAI"
+      },
+      {
+        "className": "VI",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "VI C",
+        "subject": "PHYSICS",
+        "teacherName": "MR. JAYANTO DAS"
+      },
+      {
+        "className": "VI",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "VI C",
+        "subject": "BIOLOGY",
+        "teacherName": "MS. SUTAPA BANERJEE"
+      },
+      {
+        "className": "VI",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "VI C",
+        "subject": "MATHS",
+        "teacherName": "MR. AMULYA MUKHERJEE"
+      },
+      {
+        "className": "VI",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "VI C",
+        "subject": "GEOGRAPHY",
+        "teacherName": "MS. DEBASHREE SENGUPTA"
       },
       {
         "className": "VI",
@@ -5889,6 +7329,66 @@
         "teacherName": "MR. ABHIJIT DAS"
       },
       {
+        "className": "VI",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "VI D",
+        "subject": "GEOGRAPHY",
+        "teacherName": "MS. DEBASHREE SENGUPTA"
+      },
+      {
+        "className": "VI",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "VI D",
+        "subject": "CHEMISTRY",
+        "teacherName": "MR. ABHIJIT DAS"
+      },
+      {
+        "className": "VI",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "VI D",
+        "subject": "HIST-CIV",
+        "teacherName": "MS. DEBASHREE SENGUPTA"
+      },
+      {
+        "className": "VI",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "VI D",
+        "subject": "MATHS",
+        "teacherName": "MR. ABHIJIT DAS"
+      },
+      {
+        "className": "VI",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "VI D",
+        "subject": "E.APPLICATION",
+        "teacherName": "MS. LATA PILLAI"
+      },
+      {
+        "className": "VI",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "VI D",
+        "subject": "COMPUTER",
+        "teacherName": "MR. AJAY PRASAD"
+      },
+      {
         "className": "V",
         "stream": null,
         "sectionName": "A",
@@ -6146,6 +7646,66 @@
         "periodNumber": 8,
         "section": "V A",
         "subject": "VALUE EDUCATION",
+        "teacherName": "MS. DEBASHREE SENGUPTA"
+      },
+      {
+        "className": "V",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "V A",
+        "subject": "COMPUTER",
+        "teacherName": "MS. CATHERINE SYLVESTER"
+      },
+      {
+        "className": "V",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "V A",
+        "subject": "E.APPLICATION",
+        "teacherName": "MS. DEBASHREE SENGUPTA"
+      },
+      {
+        "className": "V",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "V A",
+        "subject": "H.APPLICATION",
+        "teacherName": "MR. TOUSHIF KHAN"
+      },
+      {
+        "className": "V",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "V A",
+        "subject": "SCIENCE",
+        "teacherName": "MR. AJAY PRASAD"
+      },
+      {
+        "className": "V",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "V A",
+        "subject": "MATHS",
+        "teacherName": "MR. JAYANTO DAS"
+      },
+      {
+        "className": "V",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "V A",
+        "subject": "E.LIT",
         "teacherName": "MS. DEBASHREE SENGUPTA"
       },
       {
@@ -6477,6 +8037,76 @@
         "section": "V B",
         "subject": "VALUE EDUCATION",
         "teacherName": "MR. JAYANTO DAS"
+      },
+      {
+        "className": "V",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "V B",
+        "subject": "COMPUTER",
+        "teacherName": "MR. JAYANTO DAS"
+      },
+      {
+        "className": "V",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "V B",
+        "subject": "MATHS",
+        "teacherName": "MR. JAYANTO DAS"
+      },
+      {
+        "className": "V",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "V B",
+        "subject": "E.LIT",
+        "teacherName": "MR. DEBPRIYA GANGULY"
+      },
+      {
+        "className": "V",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "V B",
+        "subject": "SOCIAL STUDIES",
+        "teacherName": "MS. PRIYANKA BANERJEE"
+      },
+      {
+        "className": "V",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "V B",
+        "subject": "H.APPLICATION",
+        "teacherName": "MR. TOUSHIF KHAN"
+      },
+      {
+        "className": "V",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "V B",
+        "subject": "SCIENCE",
+        "teacherName": "MR. ALOKENATH GUPTA"
+      },
+      {
+        "className": "V",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "V B",
+        "subject": "E.APPLICATION",
+        "teacherName": "MS. NIDHI SINGH"
       },
       {
         "className": "V",
@@ -6781,6 +8411,66 @@
       {
         "className": "V",
         "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "V C",
+        "subject": "COMPUTER",
+        "teacherName": "MS. CATHERINE SYLVESTER"
+      },
+      {
+        "className": "V",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "V C",
+        "subject": "E.LIT",
+        "teacherName": "MS. CATHERINE SYLVESTER"
+      },
+      {
+        "className": "V",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "V C",
+        "subject": "E.APPLICATION",
+        "teacherName": "MR. DEBPRIYA GANGULY"
+      },
+      {
+        "className": "V",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "V C",
+        "subject": "MATHS",
+        "teacherName": "MR. MUKUL BANERJEE"
+      },
+      {
+        "className": "V",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "V C",
+        "subject": "SOCIAL STUDIES",
+        "teacherName": "MS. PRIYANKA GORAI"
+      },
+      {
+        "className": "V",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "V C",
+        "subject": "SCIENCE",
+        "teacherName": "MS. PALLABI MUKHERJEE"
+      },
+      {
+        "className": "V",
+        "stream": null,
         "sectionName": "D",
         "dayOfWeek": 1,
         "periodNumber": 1,
@@ -7127,6 +8817,66 @@
         "section": "V D",
         "subject": "VALUE EDUCATION",
         "teacherName": "MR. SUBIR BARAT"
+      },
+      {
+        "className": "V",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "V D",
+        "subject": "COMPUTER",
+        "teacherName": "MR. SUBIR BARAT"
+      },
+      {
+        "className": "V",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "V D",
+        "subject": "H.APPLICATION",
+        "teacherName": "MR. TOUSHIF KHAN"
+      },
+      {
+        "className": "V",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "V D",
+        "subject": "E.LIT",
+        "teacherName": "MS. PRIYANKA BANERJEE"
+      },
+      {
+        "className": "V",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "V D",
+        "subject": "E.APPLICATION",
+        "teacherName": "MS. PRIYANKA GORAI"
+      },
+      {
+        "className": "V",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "V D",
+        "subject": "SCIENCE",
+        "teacherName": "MR. SUBIR BARAT"
+      },
+      {
+        "className": "V",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "V D",
+        "subject": "SOCIAL STUDIES",
+        "teacherName": "MS. LATA PILLAI"
       },
       {
         "className": "IV",
@@ -7411,6 +9161,56 @@
       {
         "className": "IV",
         "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "IV A",
+        "subject": "E.LIT",
+        "teacherName": "SR. SHANTA  BAXLA"
+      },
+      {
+        "className": "IV",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "IV A",
+        "subject": "SCIENCE",
+        "teacherName": "MR. RAMGOPAL KABIRAJ"
+      },
+      {
+        "className": "IV",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "IV A",
+        "subject": "E.APPLICATION",
+        "teacherName": "MS. PALLABI MUKHERJEE"
+      },
+      {
+        "className": "IV",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "IV A",
+        "subject": "SOCIAL STUDIES",
+        "teacherName": "MR. DEBPRIYA GANGULY"
+      },
+      {
+        "className": "IV",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "IV A",
+        "subject": "COMPUTER",
+        "teacherName": "MR. RAMGOPAL KABIRAJ"
+      },
+      {
+        "className": "IV",
+        "stream": null,
         "sectionName": "B",
         "dayOfWeek": 1,
         "periodNumber": 1,
@@ -7721,6 +9521,36 @@
       {
         "className": "IV",
         "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "IV B",
+        "subject": "SCIENCE",
+        "teacherName": "MS. PALLABI MUKHERJEE"
+      },
+      {
+        "className": "IV",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "IV B",
+        "subject": "COMPUTER",
+        "teacherName": "MS. PALLABI MUKHERJEE"
+      },
+      {
+        "className": "IV",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "IV B",
+        "subject": "SOCIAL STUDIES",
+        "teacherName": "MS. PRIYANKA GORAI"
+      },
+      {
+        "className": "IV",
+        "stream": null,
         "sectionName": "C",
         "dayOfWeek": 1,
         "periodNumber": 1,
@@ -7996,6 +9826,56 @@
         "periodNumber": 8,
         "section": "IV C",
         "subject": "VALUE EDUCATION",
+        "teacherName": "MS. SWARNALI PALIT"
+      },
+      {
+        "className": "IV",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "IV C",
+        "subject": "SCIENCE",
+        "teacherName": "MS. SWARNALI PALIT"
+      },
+      {
+        "className": "IV",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "IV C",
+        "subject": "MATHS",
+        "teacherName": "MR. SUBIR BARAT"
+      },
+      {
+        "className": "IV",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "IV C",
+        "subject": "SOCIAL STUDIES",
+        "teacherName": "MS. SWARNALI PALIT"
+      },
+      {
+        "className": "IV",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "IV C",
+        "subject": "E.APPLICATION",
+        "teacherName": "MS. SANNU VICTOR"
+      },
+      {
+        "className": "IV",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "IV C",
+        "subject": "E.LIT",
         "teacherName": "MS. SWARNALI PALIT"
       },
       {
@@ -8319,6 +10199,66 @@
         "teacherName": "SR. SHANTA  BAXLA"
       },
       {
+        "className": "IV",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "IV D",
+        "subject": "SOCIAL STUDIES",
+        "teacherName": "SR. SHANTA  BAXLA"
+      },
+      {
+        "className": "IV",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "IV D",
+        "subject": "H.READING",
+        "teacherName": "SR. SHANTA  BAXLA"
+      },
+      {
+        "className": "IV",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "IV D",
+        "subject": "E.LIT",
+        "teacherName": "MS. DEBASHREE SENGUPTA"
+      },
+      {
+        "className": "IV",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "IV D",
+        "subject": "E.APPLICATION",
+        "teacherName": "MS. DEBASHREE SENGUPTA"
+      },
+      {
+        "className": "IV",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "IV D",
+        "subject": "SCIENCE",
+        "teacherName": "SR. SHANTA  BAXLA"
+      },
+      {
+        "className": "IV",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "IV D",
+        "subject": "MATHS",
+        "teacherName": "MR. ALOKENATH GUPTA"
+      },
+      {
         "className": "III",
         "stream": null,
         "sectionName": "A",
@@ -8667,6 +10607,76 @@
         "section": "III A",
         "subject": "VALUE EDUCATION",
         "teacherName": "MR. DIBYODOY CHAKRABORTY"
+      },
+      {
+        "className": "III",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "III A",
+        "subject": "E.LIT",
+        "teacherName": "MR. DIBYODOY CHAKRABORTY"
+      },
+      {
+        "className": "III",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "III A",
+        "subject": "E.APPLICATION",
+        "teacherName": "MR. DIBYODOY CHAKRABORTY"
+      },
+      {
+        "className": "III",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "III A",
+        "subject": "H.READING",
+        "teacherName": "MS. LAXMI SINGH"
+      },
+      {
+        "className": "III",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "III A",
+        "subject": "COMPUTER",
+        "teacherName": "MR. SUBIR BARAT"
+      },
+      {
+        "className": "III",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "III A",
+        "subject": "SCIENCE",
+        "teacherName": "MR. DIBYODOY CHAKRABORTY"
+      },
+      {
+        "className": "III",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "III A",
+        "subject": "SOCIAL STUDIES",
+        "teacherName": "MR. DIBYODOY CHAKRABORTY"
+      },
+      {
+        "className": "III",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "III A",
+        "subject": "MATHS",
+        "teacherName": "MR. SUBIR BARAT"
       },
       {
         "className": "III",
@@ -8991,6 +11001,66 @@
       {
         "className": "III",
         "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "III B",
+        "subject": "STORY TIME",
+        "teacherName": "MS. DEBASHREE ROY"
+      },
+      {
+        "className": "III",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "III B",
+        "subject": "E.APPLICATION",
+        "teacherName": "MS. SWARNALI PALIT"
+      },
+      {
+        "className": "III",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "III B",
+        "subject": "H.READING",
+        "teacherName": "SR. SHANTA  BAXLA"
+      },
+      {
+        "className": "III",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "III B",
+        "subject": "SCIENCE",
+        "teacherName": "MS. SHARMILA WILLIAM"
+      },
+      {
+        "className": "III",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "III B",
+        "subject": "MATHS",
+        "teacherName": "MS. PRIYANKA GORAI"
+      },
+      {
+        "className": "III",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "III B",
+        "subject": "SOCIAL STUDIES",
+        "teacherName": "MR. DIBYODOY CHAKRABORTY"
+      },
+      {
+        "className": "III",
+        "stream": null,
         "sectionName": "C",
         "dayOfWeek": 1,
         "periodNumber": 1,
@@ -9246,6 +11316,56 @@
         "periodNumber": 8,
         "section": "III C",
         "subject": "VALUE EDUCATION",
+        "teacherName": "MS. PRIYANKA BANERJEE"
+      },
+      {
+        "className": "III",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "III C",
+        "subject": "E.LIT",
+        "teacherName": "MS. PRIYANKA BANERJEE"
+      },
+      {
+        "className": "III",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "III C",
+        "subject": "E.APPLICATION",
+        "teacherName": "MS. PRIYANKA BANERJEE"
+      },
+      {
+        "className": "III",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "III C",
+        "subject": "MATHS",
+        "teacherName": "MS. NISHI INDRA"
+      },
+      {
+        "className": "III",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "III C",
+        "subject": "STORY TIME",
+        "teacherName": "MS. PRIYANKA BANERJEE"
+      },
+      {
+        "className": "III",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "III C",
+        "subject": "SOCIAL STUDIES",
         "teacherName": "MS. PRIYANKA BANERJEE"
       },
       {
@@ -9599,6 +11719,86 @@
         "teacherName": "MS. FIRDAUS KHAN"
       },
       {
+        "className": "III",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "III D",
+        "subject": "E.LIT",
+        "teacherName": "MS. FIRDAUS KHAN"
+      },
+      {
+        "className": "III",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "III D",
+        "subject": "SCIENCE",
+        "teacherName": "MS. FIRDAUS KHAN"
+      },
+      {
+        "className": "III",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "III D",
+        "subject": "SOCIAL STUDIES",
+        "teacherName": "MR. DIBYODOY CHAKRABORTY"
+      },
+      {
+        "className": "III",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "III D",
+        "subject": "MATHS",
+        "teacherName": "MS. FIRDAUS KHAN"
+      },
+      {
+        "className": "III",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "III D",
+        "subject": "E.APPLICATION",
+        "teacherName": "MR. DIBYODOY CHAKRABORTY"
+      },
+      {
+        "className": "III",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "III D",
+        "subject": "H.READING",
+        "teacherName": "MS. FIRDAUS KHAN"
+      },
+      {
+        "className": "III",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "III D",
+        "subject": "COMP. REVISION",
+        "teacherName": "MS. FIRDAUS KHAN"
+      },
+      {
+        "className": "III",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "III D",
+        "subject": "STORY TIME",
+        "teacherName": "MS. FIRDAUS KHAN"
+      },
+      {
         "className": "II",
         "stream": null,
         "sectionName": "A",
@@ -9876,6 +12076,56 @@
         "periodNumber": 8,
         "section": "II A",
         "subject": "VALUE EDUCATION",
+        "teacherName": "MS. SWAGATA GHOSH"
+      },
+      {
+        "className": "II",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "II A",
+        "subject": "E.LIT",
+        "teacherName": "MS. SWAGATA GHOSH"
+      },
+      {
+        "className": "II",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "II A",
+        "subject": "EVS",
+        "teacherName": "MS. SWAGATA GHOSH"
+      },
+      {
+        "className": "II",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "II A",
+        "subject": "MATHS",
+        "teacherName": "MS. SWAGATA GHOSH"
+      },
+      {
+        "className": "II",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "II A",
+        "subject": "PARK",
+        "teacherName": "MS. SWAGATA GHOSH"
+      },
+      {
+        "className": "II",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "II A",
+        "subject": "E.LANG",
         "teacherName": "MS. SWAGATA GHOSH"
       },
       {
@@ -10221,6 +12471,76 @@
       {
         "className": "II",
         "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "II B",
+        "subject": "E.LANG",
+        "teacherName": "MS.MANISHA PATRA"
+      },
+      {
+        "className": "II",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "II B",
+        "subject": "H.WRITING",
+        "teacherName": "MS.MANISHA PATRA"
+      },
+      {
+        "className": "II",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "II B",
+        "subject": "E.LIT",
+        "teacherName": "MS. FIRDAUS KHAN"
+      },
+      {
+        "className": "II",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "II B",
+        "subject": "PARK",
+        "teacherName": "MS.MANISHA PATRA"
+      },
+      {
+        "className": "II",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "II B",
+        "subject": "COMPUTER",
+        "teacherName": "MR. RAMGOPAL KABIRAJ"
+      },
+      {
+        "className": "II",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "II B",
+        "subject": "EVS",
+        "teacherName": "MS.MANISHA PATRA"
+      },
+      {
+        "className": "II",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "II B",
+        "subject": "MATHS",
+        "teacherName": "MS.MANISHA PATRA"
+      },
+      {
+        "className": "II",
+        "stream": null,
         "sectionName": "C",
         "dayOfWeek": 1,
         "periodNumber": 6,
@@ -10416,6 +12736,26 @@
         "periodNumber": 8,
         "section": "II C",
         "subject": "VALUE EDUCATION",
+        "teacherName": "MS. PRIYANKA GORAI"
+      },
+      {
+        "className": "II",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "II C",
+        "subject": "E.LIT",
+        "teacherName": "MS. PRIYANKA GORAI"
+      },
+      {
+        "className": "II",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "II C",
+        "subject": "E.LANG",
         "teacherName": "MS. PRIYANKA GORAI"
       },
       {
@@ -10759,6 +13099,66 @@
         "teacherName": "MS. SANCHITA GOSWAMI"
       },
       {
+        "className": "II",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "II D",
+        "subject": "MATHS",
+        "teacherName": "MS. SANCHITA GOSWAMI"
+      },
+      {
+        "className": "II",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "II D",
+        "subject": "COMPUTER",
+        "teacherName": "MS. SANNU VICTOR"
+      },
+      {
+        "className": "II",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "II D",
+        "subject": "EVS",
+        "teacherName": "MS. SANCHITA GOSWAMI"
+      },
+      {
+        "className": "II",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "II D",
+        "subject": "E.LANG",
+        "teacherName": "MS. SWAGATA GHOSH"
+      },
+      {
+        "className": "II",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "II D",
+        "subject": "E.LIT",
+        "teacherName": "MS. SWAGATA GHOSH"
+      },
+      {
+        "className": "II",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "II D",
+        "subject": "PARK",
+        "teacherName": "MS. SANCHITA GOSWAMI"
+      },
+      {
         "className": "I",
         "stream": null,
         "sectionName": "A",
@@ -11071,6 +13471,66 @@
       {
         "className": "I",
         "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "I A",
+        "subject": "H.READING",
+        "teacherName": "MS. LAXMI SINGH"
+      },
+      {
+        "className": "I",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "I A",
+        "subject": "SINGING",
+        "teacherName": "MS. NEHA SINGH"
+      },
+      {
+        "className": "I",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "I A",
+        "subject": "INDOOR GAMES",
+        "teacherName": "MS. NEHA SINGH"
+      },
+      {
+        "className": "I",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "I A",
+        "subject": "E.LIT",
+        "teacherName": "MS. NEHA SINGH"
+      },
+      {
+        "className": "I",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "I A",
+        "subject": "EVS",
+        "teacherName": "MS. NEHA SINGH"
+      },
+      {
+        "className": "I",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "I A",
+        "subject": "MATHS",
+        "teacherName": "MS. NEHA SINGH"
+      },
+      {
+        "className": "I",
+        "stream": null,
         "sectionName": "B",
         "dayOfWeek": 1,
         "periodNumber": 1,
@@ -11391,6 +13851,76 @@
       {
         "className": "I",
         "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "I B",
+        "subject": "E.LIT",
+        "teacherName": "MS. MINU CHATTERJEE"
+      },
+      {
+        "className": "I",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "I B",
+        "subject": "H.READING",
+        "teacherName": "MS. LAXMI SINGH"
+      },
+      {
+        "className": "I",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "I B",
+        "subject": "EVS",
+        "teacherName": "MS. MINU CHATTERJEE"
+      },
+      {
+        "className": "I",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "I B",
+        "subject": "INDOOR GAMES",
+        "teacherName": "MS. MINU CHATTERJEE"
+      },
+      {
+        "className": "I",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "I B",
+        "subject": "COMPUTER",
+        "teacherName": "MS. MINU CHATTERJEE"
+      },
+      {
+        "className": "I",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "I B",
+        "subject": "SINGING",
+        "teacherName": "MS. MINU CHATTERJEE"
+      },
+      {
+        "className": "I",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "I B",
+        "subject": "MATHS",
+        "teacherName": "MS. MINU CHATTERJEE"
+      },
+      {
+        "className": "I",
+        "stream": null,
         "sectionName": "C",
         "dayOfWeek": 1,
         "periodNumber": 1,
@@ -11506,6 +14036,16 @@
         "periodNumber": 8,
         "section": "I C",
         "subject": "VALUE EDUCATION",
+        "teacherName": "MS. ANKITA ROY"
+      },
+      {
+        "className": "I",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 2,
+        "section": "I C",
+        "subject": "MATHS",
         "teacherName": "MS. ANKITA ROY"
       },
       {
@@ -11676,6 +14216,66 @@
         "periodNumber": 8,
         "section": "I D",
         "subject": "VALUE EDUCATION",
+        "teacherName": "MS. RAMA MASIH"
+      },
+      {
+        "className": "I",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "I D",
+        "subject": "MATHS",
+        "teacherName": "MS. RAMA MASIH"
+      },
+      {
+        "className": "I",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "I D",
+        "subject": "ACTIVITY",
+        "teacherName": "MS. NISHITA DUTTA"
+      },
+      {
+        "className": "I",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "I D",
+        "subject": "EVS",
+        "teacherName": "MS. RAMA MASIH"
+      },
+      {
+        "className": "I",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "I D",
+        "subject": "INDOOR GAMES",
+        "teacherName": "MS. RAMA MASIH"
+      },
+      {
+        "className": "I",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "I D",
+        "subject": "SINGING",
+        "teacherName": "MS. RAMA MASIH"
+      },
+      {
+        "className": "I",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "I D",
+        "subject": "COMPUTER",
         "teacherName": "MS. RAMA MASIH"
       },
       {
@@ -13184,6 +15784,19 @@
       {
         "className": "X",
         "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "X A",
+        "day": 6,
+        "period": 7,
+        "classWiseSubject": "ENGLISH",
+        "teacherWiseSubject": "E.LANG",
+        "teacherName": "MS. SWEETY DEY"
+      },
+      {
+        "className": "X",
+        "stream": null,
         "sectionName": "C",
         "dayOfWeek": 1,
         "periodNumber": 6,
@@ -13249,6 +15862,58 @@
       {
         "className": "IX",
         "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "IX A",
+        "day": 6,
+        "period": 4,
+        "classWiseSubject": "SINGING",
+        "teacherWiseSubject": "DANCE",
+        "teacherName": "MS. ANKITA ROY"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 2,
+        "periodNumber": 6,
+        "section": "IX B",
+        "day": 2,
+        "period": 6,
+        "classWiseSubject": "COMP",
+        "teacherWiseSubject": "BIOLOGY",
+        "teacherName": "MR. TANMOY CHATTERJEE"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 5,
+        "periodNumber": 1,
+        "section": "IX B",
+        "day": 5,
+        "period": 1,
+        "classWiseSubject": "P.T",
+        "teacherWiseSubject": "P.T.",
+        "teacherName": "MR. TANMOY CHATTERJEE"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "IX B",
+        "day": 6,
+        "period": 5,
+        "classWiseSubject": "SINGING",
+        "teacherWiseSubject": "DANCE",
+        "teacherName": "MS. ANKITA ROY"
+      },
+      {
+        "className": "IX",
+        "stream": null,
         "sectionName": "C",
         "dayOfWeek": 2,
         "periodNumber": 5,
@@ -13297,6 +15962,19 @@
         "classWiseSubject": "HIN/BEN",
         "teacherWiseSubject": "BENGALI",
         "teacherName": "MS. SANCHITA KUNDU"
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "IX C",
+        "day": 6,
+        "period": 6,
+        "classWiseSubject": "SINGING",
+        "teacherWiseSubject": "DANCE",
+        "teacherName": "MS. ANKITA ROY"
       },
       {
         "className": "IX",
@@ -13637,6 +16315,32 @@
         "teacherName": "MS. PALLABI MUKHERJEE"
       },
       {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "VII D",
+        "day": 6,
+        "period": 4,
+        "classWiseSubject": "BIOLOGY",
+        "teacherWiseSubject": "MATHS",
+        "teacherName": "MR. ALOKENATH GUPTA"
+      },
+      {
+        "className": "VII",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "VII D",
+        "day": 6,
+        "period": 5,
+        "classWiseSubject": "MATHS",
+        "teacherWiseSubject": "BIOLOGY",
+        "teacherName": "MS. PAYEL SALUJA"
+      },
+      {
         "className": "VI",
         "stream": null,
         "sectionName": "A",
@@ -13661,6 +16365,19 @@
         "classWiseSubject": "MUSIC",
         "teacherWiseSubject": "DANCE",
         "teacherName": "MS. ANKITA ROY"
+      },
+      {
+        "className": "VI",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "VI A",
+        "day": 6,
+        "period": 3,
+        "classWiseSubject": "CHEMISTRYU",
+        "teacherWiseSubject": "CHEMISTRY",
+        "teacherName": "MS. SUTAPA BANERJEE"
       },
       {
         "className": "VI",
@@ -13847,6 +16564,32 @@
       {
         "className": "V",
         "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "V A",
+        "day": 6,
+        "period": 5,
+        "classWiseSubject": "SOCILA STUDIES",
+        "teacherWiseSubject": "SOCIAL STUDIES",
+        "teacherName": "MS. MANOSHI MUKHERJEE"
+      },
+      {
+        "className": "V",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 7,
+        "section": "V A",
+        "day": 6,
+        "period": 7,
+        "classWiseSubject": "H.READING/RECITATION",
+        "teacherWiseSubject": "H.READING/RECI",
+        "teacherName": "MR. TOUSHIF KHAN"
+      },
+      {
+        "className": "V",
+        "stream": null,
         "sectionName": "B",
         "dayOfWeek": 4,
         "periodNumber": 4,
@@ -13895,6 +16638,19 @@
         "classWiseSubject": "G.K,",
         "teacherWiseSubject": "G.K.",
         "teacherName": "MS. NIDHI SINGH"
+      },
+      {
+        "className": "V",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "V B",
+        "day": 6,
+        "period": 5,
+        "classWiseSubject": "H.READING",
+        "teacherWiseSubject": "H.READING/RECI",
+        "teacherName": "MR. TOUSHIF KHAN"
       },
       {
         "className": "V",
@@ -14025,6 +16781,32 @@
         "classWiseSubject": "E.WRITING",
         "teacherWiseSubject": "E.VOC/WRITING",
         "teacherName": "MS. PALLABI MUKHERJEE"
+      },
+      {
+        "className": "IV",
+        "stream": null,
+        "sectionName": "B",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "IV B",
+        "day": 6,
+        "period": 1,
+        "classWiseSubject": "A.APPLICATION",
+        "teacherWiseSubject": "E.APPLICATION",
+        "teacherName": "MS. NISHITA DUTTA"
+      },
+      {
+        "className": "IV",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "IV C",
+        "day": 6,
+        "period": 3,
+        "classWiseSubject": "H/B READING",
+        "teacherWiseSubject": "H.READING",
+        "teacherName": "MS. LAXMI SINGH"
       },
       {
         "className": "III",
@@ -14296,6 +17078,10 @@
           {
             "teacherName": "MR.RAJESH PATHAK",
             "subjectRaw": "SCIENCE LAB"
+          },
+          {
+            "teacherName": "MR. TANMOY CHATTERJEE",
+            "subjectRaw": "LAB"
           }
         ]
       },
@@ -14476,6 +17262,10 @@
           {
             "teacherName": "MR. JAYANTO DAS",
             "subjectRaw": "LAB"
+          },
+          {
+            "teacherName": "MR. TANMOY CHATTERJEE",
+            "subjectRaw": "LAB"
           }
         ]
       },
@@ -14585,6 +17375,31 @@
           {
             "teacherName": "MR.RAJESH PATHAK",
             "subjectRaw": "SCIENCE LAB"
+          },
+          {
+            "teacherName": "MR. TANMOY CHATTERJEE",
+            "subjectRaw": "LAB"
+          }
+        ]
+      },
+      {
+        "className": "IX",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "IX D",
+        "day": 6,
+        "period": 8,
+        "classWiseSubject": "SINGING",
+        "candidates": [
+          {
+            "teacherName": "MS. ANKITA ROY",
+            "subjectRaw": "DANCE"
+          },
+          {
+            "teacherName": "MS. SANNU VICTOR",
+            "subjectRaw": "SINGING"
           }
         ]
       },
@@ -14652,6 +17467,27 @@
         ]
       },
       {
+        "className": "VI",
+        "stream": null,
+        "sectionName": "D",
+        "dayOfWeek": 6,
+        "periodNumber": 6,
+        "section": "VI D",
+        "day": 6,
+        "period": 6,
+        "classWiseSubject": "BIOLOGY",
+        "candidates": [
+          {
+            "teacherName": "MS. PAYEL SALUJA",
+            "subjectRaw": "BIOLOGY"
+          },
+          {
+            "teacherName": "MS. MANOSHI MUKHERJEE",
+            "subjectRaw": "BIOLOGY"
+          }
+        ]
+      },
+      {
         "className": "V",
         "stream": null,
         "sectionName": "A",
@@ -14715,6 +17551,48 @@
         ]
       },
       {
+        "className": "V",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 1,
+        "section": "V C",
+        "day": 6,
+        "period": 1,
+        "classWiseSubject": "H.APPLICATION",
+        "candidates": [
+          {
+            "teacherName": "MR. TOUSHIF KHAN",
+            "subjectRaw": "H.APPLICATION"
+          },
+          {
+            "teacherName": "MS. MANOSHI MUKHERJEE",
+            "subjectRaw": "B.APPLICATION"
+          }
+        ]
+      },
+      {
+        "className": "V",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 8,
+        "section": "V C",
+        "day": 6,
+        "period": 8,
+        "classWiseSubject": "H/B READING, RECITATION",
+        "candidates": [
+          {
+            "teacherName": "MR. TOUSHIF KHAN",
+            "subjectRaw": "H.READING/RECI"
+          },
+          {
+            "teacherName": "MS. MANOSHI MUKHERJEE",
+            "subjectRaw": "B.READING/RECI"
+          }
+        ]
+      },
+      {
         "className": "III",
         "stream": null,
         "sectionName": "C",
@@ -14734,16 +17612,79 @@
             "subjectRaw": "H.GRAMMAR"
           }
         ]
+      },
+      {
+        "className": "III",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 3,
+        "section": "III C",
+        "day": 6,
+        "period": 3,
+        "classWiseSubject": "H/B READING",
+        "candidates": [
+          {
+            "teacherName": "MS. MANOSHI MUKHERJEE",
+            "subjectRaw": "B.READING/RECI"
+          },
+          {
+            "teacherName": "MS. RAMA MASIH",
+            "subjectRaw": "H.READING"
+          }
+        ]
+      },
+      {
+        "className": "I",
+        "stream": null,
+        "sectionName": "A",
+        "dayOfWeek": 6,
+        "periodNumber": 4,
+        "section": "I A",
+        "day": 6,
+        "period": 4,
+        "classWiseSubject": "COMPUTER",
+        "candidates": [
+          {
+            "teacherName": "MS. NEHA SINGH",
+            "subjectRaw": "COMPUTER(P)"
+          },
+          {
+            "teacherName": "MS. NISHI INDRA",
+            "subjectRaw": "COMPUTER(P)"
+          }
+        ]
+      },
+      {
+        "className": "I",
+        "stream": null,
+        "sectionName": "C",
+        "dayOfWeek": 6,
+        "periodNumber": 5,
+        "section": "I C",
+        "day": 6,
+        "period": 5,
+        "classWiseSubject": "H/B READING",
+        "candidates": [
+          {
+            "teacherName": "MS. LAXMI SINGH",
+            "subjectRaw": "H.READING"
+          },
+          {
+            "teacherName": "MS. RAMA MASIH",
+            "subjectRaw": "B.READING"
+          }
+        ]
       }
     ],
     "unresolvedCodes": [
       {
         "code": "XII",
-        "count": 25
+        "count": 28
       },
       {
         "code": "XI",
-        "count": 17
+        "count": 20
       },
       {
         "code": "IX",
@@ -14751,7 +17692,7 @@
       },
       {
         "code": "",
-        "count": 4
+        "count": 5
       },
       {
         "code": "VIIII A",
@@ -14916,6 +17857,13 @@
         "day": 5,
         "period": 5,
         "subjectRaw": "HISTORY"
+      },
+      {
+        "teacherName": "MS. SWEETY DEY",
+        "codeRaw": "",
+        "day": 6,
+        "period": 3,
+        "subjectRaw": "SINGING"
       },
       {
         "teacherName": "MR. RUPENDU SINHA",
@@ -15161,6 +18109,48 @@
         "day": 5,
         "period": 8,
         "subjectRaw": "CATECHISM"
+      },
+      {
+        "teacherName": "MR. TANMOY CHATTERJEE",
+        "codeRaw": "XII",
+        "day": 1,
+        "period": 4,
+        "subjectRaw": "BIOLOGY"
+      },
+      {
+        "teacherName": "MR. TANMOY CHATTERJEE",
+        "codeRaw": "XI",
+        "day": 1,
+        "period": 6,
+        "subjectRaw": "BIOLOGY"
+      },
+      {
+        "teacherName": "MR. TANMOY CHATTERJEE",
+        "codeRaw": "XI",
+        "day": 2,
+        "period": 4,
+        "subjectRaw": "BIOLOGY"
+      },
+      {
+        "teacherName": "MR. TANMOY CHATTERJEE",
+        "codeRaw": "XI",
+        "day": 3,
+        "period": 5,
+        "subjectRaw": "PRACTICALS"
+      },
+      {
+        "teacherName": "MR. TANMOY CHATTERJEE",
+        "codeRaw": "XII",
+        "day": 4,
+        "period": 5,
+        "subjectRaw": "PRACTICALS"
+      },
+      {
+        "teacherName": "MR. TANMOY CHATTERJEE",
+        "codeRaw": "XII",
+        "day": 5,
+        "period": 4,
+        "subjectRaw": "BIOLOGY"
       }
     ]
   },
@@ -15179,6 +18169,7 @@
     "MR. RAMGOPAL KABIRAJ",
     "MR. RUPENDU SINHA",
     "MR. SUBIR BARAT",
+    "MR. TANMOY CHATTERJEE",
     "MR. TOUSHIF KHAN",
     "MR. VIKASH MISHRA",
     "MR.RAJESH PATHAK",
@@ -15217,191 +18208,195 @@
   ],
   "teacherGradeBandCounts": {
     "MS. NIDHI SINGH": {
-      "junior": 2,
-      "senior": 26
+      "junior": 3,
+      "senior": 31
     },
     "MR.RAJESH PATHAK": {
       "junior": 0,
-      "senior": 28
+      "senior": 34
     },
     "MR. TOUSHIF KHAN": {
-      "junior": 9,
+      "junior": 16,
       "senior": 16
     },
     "MR. AMULYA MUKHERJEE": {
       "junior": 0,
-      "senior": 41
+      "senior": 45
     },
     "MS. RIMPY KAUR": {
       "junior": 10,
-      "senior": 23
+      "senior": 30
     },
     "MR. ALOKENATH GUPTA": {
-      "junior": 3,
-      "senior": 25
+      "junior": 5,
+      "senior": 30
     },
     "MR. AMIT VISWAKARMA": {
       "junior": 0,
-      "senior": 30
+      "senior": 36
     },
     "MS. SWEETY DEY": {
       "junior": 0,
-      "senior": 32
+      "senior": 37
+    },
+    "MR. TANMOY CHATTERJEE": {
+      "junior": 0,
+      "senior": 33
     },
     "MR. AJAY PRASAD": {
-      "junior": 3,
-      "senior": 32
+      "junior": 4,
+      "senior": 36
     },
     "MR. RUPENDU SINHA": {
       "junior": 0,
-      "senior": 29
+      "senior": 36
     },
     "MR. CECIL FERGUSAN": {
       "junior": 0,
-      "senior": 31
+      "senior": 36
     },
     "MS. NIDHI KUMARI": {
       "junior": 0,
-      "senior": 21
+      "senior": 26
     },
     "MS. SWARNALI PALIT": {
-      "junior": 20,
-      "senior": 12
+      "junior": 24,
+      "senior": 15
     },
     "MS.RITA SEN": {
       "junior": 0,
       "senior": 17
     },
     "MS. LAXMI SINGH": {
-      "junior": 14,
+      "junior": 19,
       "senior": 19
     },
     "MR. RAMGOPAL KABIRAJ": {
-      "junior": 15,
-      "senior": 17
+      "junior": 18,
+      "senior": 19
     },
     "MR. ABHIJIT DAS": {
       "junior": 3,
-      "senior": 30
+      "senior": 37
     },
     "MS. SANCHITA KUNDU": {
       "junior": 0,
       "senior": 14
     },
     "MR. MUKUL BANERJEE": {
-      "junior": 6,
-      "senior": 25
+      "junior": 7,
+      "senior": 31
     },
     "MR. DEBPRIYA GANGULY": {
-      "junior": 11,
+      "junior": 14,
+      "senior": 20
+    },
+    "MS. ANKITA ROY": {
+      "junior": 23,
       "senior": 16
     },
     "MR. VIKASH MISHRA": {
       "junior": 4,
-      "senior": 27
+      "senior": 34
     },
     "MR. JAYANTO DAS": {
-      "junior": 17,
-      "senior": 13
+      "junior": 20,
+      "senior": 16
+    },
+    "MS. SANNU VICTOR": {
+      "junior": 29,
+      "senior": 1
     },
     "MS. PALLABI MUKHERJEE": {
-      "junior": 19,
-      "senior": 14
+      "junior": 23,
+      "senior": 16
     },
     "SR. SHANTA  BAXLA": {
-      "junior": 25,
+      "junior": 30,
       "senior": 6
     },
     "MS. PAYEL SALUJA": {
       "junior": 9,
-      "senior": 23
-    },
-    "MS. ANKITA ROY": {
-      "junior": 22,
-      "senior": 12
+      "senior": 30
     },
     "MS. DEBASHREE SENGUPTA": {
-      "junior": 21,
-      "senior": 11
+      "junior": 25,
+      "senior": 14
     },
     "MS. SUTAPA BANERJEE": {
       "junior": 14,
-      "senior": 17
+      "senior": 24
     },
     "MS. RAMA MASIH": {
-      "junior": 19,
+      "junior": 26,
       "senior": 10
     },
     "MS. LATA PILLAI": {
-      "junior": 12,
-      "senior": 20
+      "junior": 13,
+      "senior": 26
     },
     "MS. SANCHITA GOSWAMI": {
-      "junior": 23,
-      "senior": 8
+      "junior": 26,
+      "senior": 12
     },
     "MR. SUBIR BARAT": {
-      "junior": 24,
-      "senior": 7
-    },
-    "MS. DEBASHREE ROY": {
-      "junior": 26,
-      "senior": 2
-    },
-    "MS. MANOSHI MUKHERJEE": {
-      "junior": 24,
+      "junior": 29,
       "senior": 9
     },
-    "MS. CATHERINE SYLVESTER": {
+    "MS. DEBASHREE ROY": {
       "junior": 27,
-      "senior": 6
+      "senior": 3
+    },
+    "MS. MANOSHI MUKHERJEE": {
+      "junior": 28,
+      "senior": 11
+    },
+    "MS. CATHERINE SYLVESTER": {
+      "junior": 30,
+      "senior": 9
     },
     "MS. PRIYANKA BANERJEE": {
-      "junior": 20,
+      "junior": 26,
       "senior": 12
     },
     "MS. SHARMILA WILLIAM": {
-      "junior": 27,
+      "junior": 28,
       "senior": 2
     },
     "MS.MANISHA PATRA": {
-      "junior": 31,
+      "junior": 36,
       "senior": 0
     },
     "MS. PRIYANKA GORAI": {
-      "junior": 33,
+      "junior": 39,
       "senior": 0
     },
     "MR. DIBYODOY CHAKRABORTY": {
-      "junior": 33,
+      "junior": 40,
       "senior": 0
     },
     "MS. NISHITA DUTTA": {
-      "junior": 27,
+      "junior": 29,
       "senior": 0
     },
     "MS. NISHI INDRA": {
-      "junior": 32,
+      "junior": 34,
       "senior": 0
     },
     "MS. FIRDAUS KHAN": {
-      "junior": 32,
+      "junior": 39,
       "senior": 0
     },
     "MS. SWAGATA GHOSH": {
-      "junior": 31,
-      "senior": 0
-    },
-    "MS. SANNU VICTOR": {
-      "junior": 27,
+      "junior": 38,
       "senior": 0
     },
     "MS. NEHA SINGH": {
-      "junior": 30,
+      "junior": 36,
       "senior": 0
     },
     "MS. MINU CHATTERJEE": {
-      "junior": 33,
+      "junior": 39,
       "senior": 0
     },
     "MS. IPSHITA TIWARY": {

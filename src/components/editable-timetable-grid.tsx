@@ -24,6 +24,7 @@ export function EditableTimetableGrid({
   teachers,
   qualifiedTeacherIdsBySubject,
   defaultSectionId,
+  readOnly,
 }: {
   periodSlots: PeriodSlot[];
   cells: EditableCellData[];
@@ -38,6 +39,8 @@ export function EditableTimetableGrid({
    * teacher is free then, so it renders a plain placeholder instead.
    */
   defaultSectionId?: string;
+  /** Viewing an archived session — server rejects writes regardless; this just avoids a doomed-to-fail edit affordance. */
+  readOnly?: boolean;
 }) {
   const cellMap = new Map<string, EditableCellData>();
   for (const c of cells) cellMap.set(`${c.day_of_week}:${c.period_slot_id}`, c);
@@ -88,6 +91,7 @@ export function EditableTimetableGrid({
                         qualifiedTeacherIdsBySubject={qualifiedTeacherIdsBySubject}
                         sectionLabel={cell?.sectionLabel}
                         jumpHref={cell?.jumpHref}
+                        readOnly={readOnly}
                       />
                     ) : (
                       <div className="px-2 py-1 text-slate-300">Free</div>

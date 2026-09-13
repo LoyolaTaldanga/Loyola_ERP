@@ -19,14 +19,15 @@ const STATUS_CLASS: Record<SubstitutionStatus, string> = {
   cancelled: "bg-slate-100 text-slate-500",
 };
 
-export async function AbsenteesBox() {
+export async function AbsenteesBox({ sessionId }: { sessionId: string }) {
   const supabase = await createClient();
   const today = todayISO();
 
   const { data: absences } = await supabase
     .from("teacher_absences")
     .select("id, status, affected_periods, teachers!teacher_absences_teacher_id_fkey(name), substitutions(status)")
-    .eq("date", today);
+    .eq("date", today)
+    .eq("session_id", sessionId);
 
   return (
     <div className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm">

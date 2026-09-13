@@ -11,6 +11,7 @@ interface TeacherOption {
 
 export interface SubstitutionRowData {
   id: string;
+  absenceId: string | null;
   date: string;
   periodLabel: string;
   sectionLabel: string;
@@ -133,6 +134,24 @@ export function SubstituteRow({
         {isBusy && <p className="mt-1 text-xs text-amber-600">⚠ Already has a class at this time.</p>}
         {result?.error && <p className="mt-1 text-xs text-red-600">{result.error}</p>}
         {result?.emailWarning && <p className="mt-1 text-xs text-amber-600">{result.emailWarning}</p>}
+      </td>
+      <td className="px-3 py-2">
+        {substitution.absenceId && (
+          <div className="flex gap-2 text-xs">
+            <a
+              href={`/api/substitutions/absence/${substitution.absenceId}?format=xlsx`}
+              className="text-brand-primary underline"
+            >
+              Excel
+            </a>
+            <a
+              href={`/api/substitutions/absence/${substitution.absenceId}?format=pdf`}
+              className="text-brand-primary underline"
+            >
+              PDF
+            </a>
+          </div>
+        )}
       </td>
     </tr>
   );

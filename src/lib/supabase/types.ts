@@ -8,14 +8,28 @@ export type SubstitutionStatus =
   | "flagged_for_review"
   | "confirmed"
   | "cancelled";
+export type LeaveRequestStatus = "pending" | "approved" | "rejected" | "cancelled";
+export type SessionStatus = "draft" | "active" | "archived";
+export type LeaveType = "casual" | "paid";
 
 export type Role = "admin" | "teacher";
+
+export type Session = {
+  id: string;
+  label: string;
+  status: SessionStatus;
+  created_at: string;
+  activated_at: string | null;
+  archived_at: string | null;
+  created_from_session_id: string | null;
+}
 
 export type Class = {
   id: string;
   name: string;
   stream: string | null;
   display_order: number;
+  session_id: string;
   created_at: string;
   updated_at: string;
 }
@@ -25,6 +39,7 @@ export type Section = {
   class_id: string;
   name: string;
   class_teacher_id: string | null;
+  session_id: string;
   created_at: string;
   updated_at: string;
 }
@@ -48,6 +63,7 @@ export type Teacher = {
   is_active: boolean;
   group: TeacherGroup;
   group_needs_review: boolean;
+  leave_quota_override: number | null;
   created_at: string;
   updated_at: string;
 }
@@ -79,6 +95,7 @@ export type TimetableEntry = {
   subject_id: string | null;
   teacher_id: string | null;
   is_practical: boolean;
+  session_id: string;
   created_at: string;
   updated_at: string;
 }
@@ -92,6 +109,9 @@ export type TeacherAbsence = {
   status: AbsenceStatus;
   affected_periods: number[] | null;
   notes: string | null;
+  leave_request_id: string | null;
+  session_id: string;
+  leave_type: LeaveType | null;
   created_at: string;
   updated_at: string;
 }
@@ -108,6 +128,7 @@ export type Substitution = {
   created_by: string | null;
   notified_at: string | null;
   note: string | null;
+  session_id: string;
   created_at: string;
   updated_at: string;
 }
@@ -118,6 +139,27 @@ export type SubstitutionRule = {
   priority_order: number;
   config: Record<string, unknown>;
   is_active: boolean;
+  created_at: string;
+  updated_at: string;
+}
+
+export type AppSetting = {
+  key: string;
+  value: unknown;
+  updated_at: string;
+}
+
+export type LeaveRequest = {
+  id: string;
+  teacher_id: string;
+  start_date: string;
+  end_date: string;
+  status: LeaveRequestStatus;
+  requested_at: string;
+  reason: string | null;
+  reviewed_by: string | null;
+  reviewed_at: string | null;
+  session_id: string;
   created_at: string;
   updated_at: string;
 }
@@ -143,7 +185,30 @@ type TableDef<Row, Relationships extends Relationship[] = []> = {
 export type Database = {
   public: {
     Tables: {
-      classes: TableDef<Class>;
+      sessions: TableDef<
+        Session,
+        [
+          {
+            foreignKeyName: "sessions_created_from_session_id_fkey";
+            columns: ["created_from_session_id"];
+            isOneToOne: false;
+            referencedRelation: "sessions";
+            referencedColumns: ["id"];
+          },
+        ]
+      >;
+      classes: TableDef<
+        Class,
+        [
+          {
+            foreignKeyName: "classes_session_id_fkey";
+            columns: ["session_id"];
+            isOneToOne: false;
+            referencedRelation: "sessions";
+            referencedColumns: ["id"];
+          },
+        ]
+      >;
       sections: TableDef<
         Section,
         [
@@ -159,6 +224,13 @@ export type Database = {
             columns: ["class_teacher_id"];
             isOneToOne: false;
             referencedRelation: "teachers";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "sections_session_id_fkey";
+            columns: ["session_id"];
+            isOneToOne: false;
+            referencedRelation: "sessions";
             referencedColumns: ["id"];
           },
         ]
@@ -216,6 +288,13 @@ export type Database = {
             referencedRelation: "teachers";
             referencedColumns: ["id"];
           },
+          {
+            foreignKeyName: "timetable_entries_session_id_fkey";
+            columns: ["session_id"];
+            isOneToOne: false;
+            referencedRelation: "sessions";
+            referencedColumns: ["id"];
+          },
         ]
       >;
       teacher_absences: TableDef<
@@ -233,6 +312,20 @@ export type Database = {
             columns: ["reported_by"];
             isOneToOne: false;
             referencedRelation: "teachers";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "teacher_absences_leave_request_id_fkey";
+            columns: ["leave_request_id"];
+            isOneToOne: false;
+            referencedRelation: "leave_requests";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "teacher_absences_session_id_fkey";
+            columns: ["session_id"];
+            isOneToOne: false;
+            referencedRelation: "sessions";
             referencedColumns: ["id"];
           },
         ]
@@ -268,16 +361,55 @@ export type Database = {
             referencedRelation: "teachers";
             referencedColumns: ["id"];
           },
+          {
+            foreignKeyName: "substitutions_session_id_fkey";
+            columns: ["session_id"];
+            isOneToOne: false;
+            referencedRelation: "sessions";
+            referencedColumns: ["id"];
+          },
         ]
       >;
       substitution_rules: TableDef<SubstitutionRule>;
+      app_settings: TableDef<AppSetting>;
+      leave_requests: TableDef<
+        LeaveRequest,
+        [
+          {
+            foreignKeyName: "leave_requests_teacher_id_fkey";
+            columns: ["teacher_id"];
+            isOneToOne: false;
+            referencedRelation: "teachers";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "leave_requests_reviewed_by_fkey";
+            columns: ["reviewed_by"];
+            isOneToOne: false;
+            referencedRelation: "teachers";
+            referencedColumns: ["id"];
+          },
+          {
+            foreignKeyName: "leave_requests_session_id_fkey";
+            columns: ["session_id"];
+            isOneToOne: false;
+            referencedRelation: "sessions";
+            referencedColumns: ["id"];
+          },
+        ]
+      >;
     };
     // Plain `{}` (not Record<string, never>) — a Record type carries an
     // implicit string index signature, which would make every table name
     // also match `keyof Views`/`keyof Functions` and break overload
     // resolution on `.from(...)`.
     Views: {};
-    Functions: {};
+    Functions: {
+      activate_session: {
+        Args: { target_session_id: string };
+        Returns: void;
+      };
+    };
     Enums: {};
     CompositeTypes: {};
   };

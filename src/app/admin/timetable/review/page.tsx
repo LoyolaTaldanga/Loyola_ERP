@@ -3,6 +3,8 @@ import * as path from "node:path";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import { DAY_ABBR } from "@/lib/timetable-grid";
+import { getViewingSession, isSessionEditable } from "@/lib/session-context";
+import { SessionBanner } from "@/components/session-banner";
 import { AmbiguousRow } from "./ambiguous-row";
 import { UnresolvedCodeRow } from "./unresolved-code-row";
 
@@ -50,14 +52,18 @@ function readReport(): ImportReport | null {
 export default async function TimetableReviewPage() {
   const report = readReport();
   const supabase = await createClient();
+  const viewing = await getViewingSession(supabase);
+  const readOnly = !isSessionEditable(viewing.status);
 
   const { data: sections } = await supabase
     .from("sections")
     .select("id, name, classes(name, stream, display_order)")
+    .eq("session_id", viewing.id)
     .order("name");
   const { data: classes } = await supabase
     .from("classes")
     .select("id, name, stream, display_order")
+    .eq("session_id", viewing.id)
     .order("display_order");
 
   const sectionIdByKey = new Map<string, string>();
@@ -111,6 +117,10 @@ export default async function TimetableReviewPage() {
         files. Resolve them here instead of editing the raw report.
       </p>
 
+      <div className="mt-4">
+        <SessionBanner session={viewing} />
+      </div>
+
       <Section title={`Unresolved section codes (${unresolvedCodes.length})`}>
         <p className="mb-3 text-sm text-slate-500">
           These codes from the Teacher-wise sheet couldn&apos;t be matched to a known section (bare
@@ -133,6 +143,7 @@ export default async function TimetableReviewPage() {
                 count={u.count}
                 sections={sectionOptions}
                 classes={classOptions}
+                readOnly={readOnly}
               />
             ))}
           </tbody>
@@ -155,7 +166,7 @@ export default async function TimetableReviewPage() {
           </thead>
           <tbody>
             {ambiguous.map((a, i) => (
-              <AmbiguousRow key={i} item={a} />
+              <AmbiguousRow key={i} item={a} sessionId={viewing.id} readOnly={readOnly} />
             ))}
           </tbody>
         </table>

@@ -5,12 +5,16 @@ import { usePathname } from "next/navigation";
 
 const links = [
   { href: "/admin", label: "Dashboard", exact: true },
+  { href: "/admin/sessions", label: "Sessions" },
   { href: "/admin/timetable", label: "Timetable" },
   { href: "/admin/teachers", label: "Teachers" },
   { href: "/admin/absences", label: "Absences" },
+  { href: "/admin/leave-requests", label: "Leave Requests" },
+  { href: "/admin/leave-summary", label: "Leave Summary" },
   { href: "/admin/substitutions", label: "Substitutions" },
   { href: "/admin/rules", label: "Rules" },
   { href: "/admin/import-report", label: "Import Report" },
+  { href: "/admin/reports/subject-allotment", label: "Subject Allotment" },
 ];
 
 export function AdminNav() {

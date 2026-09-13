@@ -39,7 +39,7 @@ yarn-error.log*
 /supabase/.branches
 
 # contains plaintext teacher passwords — never commit
-/docs/references/teacher-credentials.md
+/docs/reference/teacher-credentials.md
 
 # vercel
 .vercel

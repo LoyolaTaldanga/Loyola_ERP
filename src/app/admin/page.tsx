@@ -1,5 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
 import { todayISO } from "@/lib/today";
+import { getActiveSession } from "@/lib/session-context";
 import { LiveClock } from "@/components/live-clock";
 import { StatCard } from "@/components/stat-card";
 import { AbsenteesBox } from "./absentees-box";
@@ -7,13 +8,18 @@ import { AbsenteesBox } from "./absentees-box";
 export default async function AdminHomePage() {
   const supabase = await createClient();
   const today = todayISO();
+  const activeSession = await getActiveSession(supabase);
 
   const [{ count: teacherCount }, { count: classCount }, { count: sectionCount }, { count: absentCount }] =
     await Promise.all([
       supabase.from("teachers").select("*", { count: "exact", head: true }).eq("is_active", true),
-      supabase.from("classes").select("*", { count: "exact", head: true }),
-      supabase.from("sections").select("*", { count: "exact", head: true }),
-      supabase.from("teacher_absences").select("*", { count: "exact", head: true }).eq("date", today),
+      supabase.from("classes").select("*", { count: "exact", head: true }).eq("session_id", activeSession.id),
+      supabase.from("sections").select("*", { count: "exact", head: true }).eq("session_id", activeSession.id),
+      supabase
+        .from("teacher_absences")
+        .select("*", { count: "exact", head: true })
+        .eq("date", today)
+        .eq("session_id", activeSession.id),
     ]);
 
   return (
@@ -36,7 +42,7 @@ export default async function AdminHomePage() {
       </div>
 
       <div className="mt-8">
-        <AbsenteesBox />
+        <AbsenteesBox sessionId={activeSession.id} />
       </div>
     </div>
   );

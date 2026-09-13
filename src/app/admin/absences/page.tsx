@@ -1,5 +1,6 @@
 import { createClient } from "@/lib/supabase/server";
 import { todayISO } from "@/lib/today";
+import { getActiveSession } from "@/lib/session-context";
 import { AbsenceForm, type TeacherPeriodEntry } from "./absence-form";
 
 function classLabel(cls: { name: string; stream: string | null } | null): string {
@@ -9,6 +10,7 @@ function classLabel(cls: { name: string; stream: string | null } | null): string
 
 export default async function AbsencesPage() {
   const supabase = await createClient();
+  const activeSession = await getActiveSession(supabase);
 
   const { data: teachers } = await supabase
     .from("teachers")
@@ -28,6 +30,7 @@ export default async function AbsencesPage() {
         "teacher_id, day_of_week, period_slot_id, subjects(name), sections(name, classes(name, stream)), period_slots(period_number, label, start_time, end_time)"
       )
       .not("teacher_id", "is", null)
+      .eq("session_id", activeSession.id)
       .range(from, from + pageSize - 1);
     if (error) throw error;
     for (const e of page ?? []) {

@@ -1,7 +1,8 @@
 "use client";
 
 import { useActionState, useEffect, useMemo, useRef, useState } from "react";
-import { markAbsence, type MarkAbsenceState } from "./actions";
+import { markAbsence, previewAbsenceLeaveType, type MarkAbsenceState } from "./actions";
+import type { LeaveType } from "@/lib/supabase/types";
 
 export interface TeacherPeriodEntry {
   periodSlotId: string;
@@ -28,12 +29,15 @@ export function AbsenceForm({
   const [date, setDate] = useState(defaultDate);
   const [status, setStatus] = useState<"full_day" | "partial">("full_day");
   const [selectedPeriods, setSelectedPeriods] = useState<Set<string>>(new Set());
+  const [leaveType, setLeaveType] = useState<LeaveType>("casual");
+  const [leaveTypeLoading, setLeaveTypeLoading] = useState(false);
 
   useEffect(() => {
     if (state.success) {
       setTeacherId("");
       setSelectedPeriods(new Set());
       setStatus("full_day");
+      setLeaveType("casual");
       formRef.current?.reset();
     }
   }, [state.success]);
@@ -41,6 +45,22 @@ export function AbsenceForm({
   const dayOfWeek = useMemo(() => new Date(`${date}T00:00:00`).getDay(), [date]);
   const isWeekend = dayOfWeek < 1 || dayOfWeek > 5;
   const periodsToday = teacherId ? (entriesByTeacherAndDay[teacherId]?.[dayOfWeek] ?? []) : [];
+
+  // Only meaningful for a full-day mark — refetch the casual/paid suggestion
+  // whenever teacher/date change, so it always reflects that teacher's
+  // current-year casual balance for that specific date.
+  useEffect(() => {
+    if (!teacherId || !date || isWeekend || status !== "full_day") return;
+    let cancelled = false;
+    setLeaveTypeLoading(true);
+    previewAbsenceLeaveType(teacherId, date).then((r) => {
+      if (!cancelled && r.suggestedType) setLeaveType(r.suggestedType);
+      if (!cancelled) setLeaveTypeLoading(false);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [teacherId, date, isWeekend, status]);
 
   function togglePeriod(id: string) {
     setSelectedPeriods((prev) => {
@@ -123,6 +143,30 @@ export function AbsenceForm({
               Specific periods
             </label>
           </div>
+
+          {status === "full_day" && periodsToday.length > 0 && (
+            <fieldset className="flex items-center gap-4 rounded-md border border-slate-200 p-3 text-sm">
+              <legend className="px-1 text-xs font-medium text-slate-500">Leave type</legend>
+              <input type="hidden" name="leaveType" value={leaveType} />
+              <label className="flex items-center gap-1">
+                <input
+                  type="radio"
+                  checked={leaveType === "casual"}
+                  onChange={() => setLeaveType("casual")}
+                />
+                Casual
+              </label>
+              <label className="flex items-center gap-1">
+                <input
+                  type="radio"
+                  checked={leaveType === "paid"}
+                  onChange={() => setLeaveType("paid")}
+                />
+                Paid
+              </label>
+              {leaveTypeLoading && <span className="text-xs text-slate-400">Checking balance…</span>}
+            </fieldset>
+          )}
 
           {periodsToday.length === 0 ? (
             <p className="text-sm text-slate-400">This teacher has no periods scheduled that day.</p>

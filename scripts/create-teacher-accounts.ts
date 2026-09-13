@@ -23,7 +23,7 @@ import { generateTempPassword } from "../src/lib/password";
 dotenv.config({ path: path.join(process.cwd(), ".env.local") });
 
 const REPORT_FILE = path.join(process.cwd(), "scripts/import-report.json");
-const CREDENTIALS_FILE = path.join(process.cwd(), "docs/references/teacher-credentials.md");
+const CREDENTIALS_FILE = path.join(process.cwd(), "docs/reference/teacher-credentials.md");
 
 interface ImportReport {
   teacherRosterFromTeacherWiseSheet: string[];

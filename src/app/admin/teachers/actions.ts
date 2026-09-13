@@ -127,3 +127,28 @@ export async function updateTeacherGroup(
   revalidatePath("/admin/teachers");
   return { error: null };
 }
+
+export async function updateLeaveQuotaOverride(
+  teacherId: string,
+  value: number | null
+): Promise<{ error: string | null }> {
+  const current = await getCurrentUser();
+  if (!current || current.role !== "admin") {
+    return { error: "Not authorized." };
+  }
+  if (value !== null && (!Number.isInteger(value) || value < 0)) {
+    return { error: "Quota must be blank or a non-negative whole number." };
+  }
+
+  const admin = createAdminClient();
+  const { error } = await admin.from("teachers").update({ leave_quota_override: value }).eq("id", teacherId);
+  if (error) {
+    return { error: error.message };
+  }
+
+  revalidatePath("/admin/teachers");
+  revalidatePath("/admin/teachers/[id]", "page");
+  revalidatePath("/admin/leave-summary");
+  revalidatePath("/dashboard");
+  return { error: null };
+}

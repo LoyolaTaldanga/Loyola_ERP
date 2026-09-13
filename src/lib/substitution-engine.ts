@@ -1,6 +1,7 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { Database, SubstitutionStatus } from "./supabase/types";
 import { gradeBandForClassName } from "./grade-band";
+import { assertSessionIsActive } from "./session-context";
 
 // No "server-only" import here on purpose — the engine takes a Supabase
 // client rather than constructing one itself, so it has no dependency that
@@ -44,7 +45,7 @@ export async function computeAutoAssignment(client: Client, substitutionId: stri
   const { data: sub, error } = await client
     .from("substitutions")
     .select(
-      `id, date,
+      `id, date, session_id,
        timetable_entries(day_of_week, period_slot_id, subject_id,
          sections(classes(name)),
          subjects(category),
@@ -74,6 +75,7 @@ export async function computeAutoAssignment(client: Client, substitutionId: stri
   const subjectCategory = entry.subjects?.category ?? "academic";
   const targetGroup = gradeBandForClassName(entry.sections?.classes?.name ?? "");
   const date = sub.date;
+  const sessionId = sub.session_id;
 
   const rules = await loadRules(client);
   const minFreePeriods = Number(rules["min_free_periods_same_subject"]?.config?.min_free_periods ?? 2);
@@ -92,6 +94,7 @@ export async function computeAutoAssignment(client: Client, substitutionId: stri
     .select("teacher_id")
     .eq("day_of_week", dayOfWeek)
     .eq("period_slot_id", periodSlotId)
+    .eq("session_id", sessionId)
     .not("teacher_id", "is", null);
   const busyAtSlot = new Set((busyRows ?? []).map((r) => r.teacher_id!));
 
@@ -99,7 +102,8 @@ export async function computeAutoAssignment(client: Client, substitutionId: stri
   const { data: absencesToday } = await client
     .from("teacher_absences")
     .select("teacher_id, status, affected_periods")
-    .eq("date", date);
+    .eq("date", date)
+    .eq("session_id", sessionId);
   const absentAtThisPeriod = new Set<string>();
   for (const a of absencesToday ?? []) {
     if (a.status === "full_day") absentAtThisPeriod.add(a.teacher_id);
@@ -112,6 +116,7 @@ export async function computeAutoAssignment(client: Client, substitutionId: stri
     .from("substitutions")
     .select("substitute_teacher_id, timetable_entries(period_slot_id)")
     .eq("date", date)
+    .eq("session_id", sessionId)
     .not("substitute_teacher_id", "is", null)
     .in("status", ["assigned", "confirmed", "flagged_for_review"]);
   const alreadySubbingAtSlot = new Set<string>();
@@ -164,6 +169,7 @@ export async function computeAutoAssignment(client: Client, substitutionId: stri
     .from("timetable_entries")
     .select("teacher_id")
     .eq("day_of_week", dayOfWeek)
+    .eq("session_id", sessionId)
     .not("teacher_id", "is", null);
   const busyCountByTeacher = new Map<string, number>();
   for (const e of teacherDayEntries ?? []) {
@@ -222,6 +228,9 @@ export async function computeAutoAssignment(client: Client, substitutionId: stri
 
 /** Runs computeAutoAssignment and writes the result onto the substitutions row. */
 export async function autoAssignAndSave(client: Client, substitutionId: string): Promise<AutoAssignResult> {
+  const { data: sub } = await client.from("substitutions").select("session_id").eq("id", substitutionId).single();
+  if (sub) await assertSessionIsActive(client, sub.session_id);
+
   const result = await computeAutoAssignment(client, substitutionId);
   await client
     .from("substitutions")

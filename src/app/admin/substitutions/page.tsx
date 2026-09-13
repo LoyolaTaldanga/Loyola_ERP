@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import { todayISO } from "@/lib/today";
+import { getActiveSession } from "@/lib/session-context";
 import { SubstituteRow } from "./substitute-row";
 import type { AssignmentMethod, SubstitutionStatus } from "@/lib/supabase/types";
 
@@ -27,6 +28,7 @@ export default async function SubstitutionsPage({
 
   const supabase = await createClient();
   const today = todayISO();
+  const activeSession = await getActiveSession(supabase);
 
   const { data: teachers } = await supabase
     .from("teachers")
@@ -42,11 +44,12 @@ export default async function SubstitutionsPage({
     .select(
       `id, date, status, assignment_method, is_exception_fallback, substitute_teacher_id, note,
        timetable_entries(day_of_week, period_slot_id, subjects(name), sections(name, classes(name, stream)), period_slots(period_number, label, start_time, end_time)),
-       teacher_absences(teacher_id, teachers!teacher_absences_teacher_id_fkey(name)),
+       teacher_absences(id, teacher_id, teachers!teacher_absences_teacher_id_fkey(name)),
        substitute:teachers!substitutions_substitute_teacher_id_fkey(name)`
     )
     .in("status", statusFilter)
     .gte("date", today)
+    .eq("session_id", activeSession.id)
     .order("date", { ascending: true });
   if (error) throw error;
 
@@ -60,6 +63,7 @@ export default async function SubstitutionsPage({
       .from("timetable_entries")
       .select("day_of_week, period_slot_id, teacher_id")
       .not("teacher_id", "is", null)
+      .eq("session_id", activeSession.id)
       .range(from, from + pageSize - 1);
     if (pageError) throw pageError;
     for (const e of page ?? []) {
@@ -80,7 +84,11 @@ export default async function SubstitutionsPage({
         sections: { name: string; classes: { name: string; stream: string | null } | null } | null;
         period_slots: { period_number: number; label: string; start_time: string; end_time: string };
       };
-      const absence = sub.teacher_absences as unknown as { teacher_id: string; teachers: { name: string } | null } | null;
+      const absence = sub.teacher_absences as unknown as {
+        id: string;
+        teacher_id: string;
+        teachers: { name: string } | null;
+      } | null;
       const substituteInfo = sub.substitute as unknown as { name: string } | null;
 
       const busyIds = busyByDayPeriod.get(`${entry.day_of_week}|${entry.period_slot_id}`) ?? new Set<string>();
@@ -91,6 +99,7 @@ export default async function SubstitutionsPage({
       return {
         substitution: {
           id: sub.id,
+          absenceId: absence?.id ?? null,
           date: sub.date,
           periodLabel: `${entry.period_slots.label} (${entry.period_slots.start_time.slice(0, 5)}–${entry.period_slots.end_time.slice(0, 5)})`,
           sectionLabel: entry.sections ? `${classLabel(entry.sections.classes)} — ${entry.sections.name}` : "",
@@ -134,6 +143,23 @@ export default async function SubstitutionsPage({
         >
           All
         </Link>
+        {rows.some((r) => r.substitution.date === today) && (
+          <div className="ml-auto flex items-center gap-2 text-sm">
+            <span className="text-brand-neutral">Download all for today:</span>
+            <a
+              href={`/api/substitutions/day/${today}?format=xlsx`}
+              className="rounded-md border border-slate-300 bg-white px-3 py-1.5 font-medium text-slate-600"
+            >
+              Excel
+            </a>
+            <a
+              href={`/api/substitutions/day/${today}?format=pdf`}
+              className="rounded-md border border-slate-300 bg-white px-3 py-1.5 font-medium text-slate-600"
+            >
+              PDF
+            </a>
+          </div>
+        )}
       </div>
 
       <div className="mt-4 overflow-x-auto rounded-lg border border-slate-200 bg-white shadow-sm">
@@ -146,6 +172,7 @@ export default async function SubstitutionsPage({
               <th className="px-3 py-2 font-medium">Absent teacher</th>
               <th className="px-3 py-2 font-medium">Status</th>
               <th className="px-3 py-2 font-medium">Override</th>
+              <th className="px-3 py-2 font-medium">Slip</th>
             </tr>
           </thead>
           <tbody>
@@ -159,7 +186,7 @@ export default async function SubstitutionsPage({
             ))}
             {rows.length === 0 && (
               <tr>
-                <td colSpan={6} className="px-4 py-8 text-center text-slate-400">
+                <td colSpan={7} className="px-4 py-8 text-center text-slate-400">
                   {activeTab === "needs-review" ? "Nothing needs review." : "No substitutions found."}
                 </td>
               </tr>

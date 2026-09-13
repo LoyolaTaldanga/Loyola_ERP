@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsx *)",
+      "Bash(mkdir -p \"/d/FreeLanching/Loyal/LOYOLA_ERP/src/app/api/timetable/section/[sectionId]\" \"/d/FreeLanching/Loyal/LOYOLA_ERP/src/app/api/teachers/[teacherId]/timetable\")",
+      "Bash(rm -f verify_timetable.ts verify_nosat.ts dump_tt.mjs dump2.mjs timetable-*.xlsx && npx tsc --noEmit -p tsconfig.json 2>&1 | head -50)",
+      "Bash(echo \"EXIT: $?\")",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(mkdir -p \"/d/FreeLanching/Loyal/LOYOLA_ERP/src/app/api/leave-requests/[id]/slip\")",
+      "Bash(rm -f /d/FreeLanching/Loyal/LOYOLA_ERP/baseline.mjs; tail -60 \"C:\\\\Users\\\\ankit\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\d--FreeLanching-Loyal-LOYOLA-ERP\\\\5edb70aa-3af9-4f85-844d-0fc9e72a21db\\\\tasks\\\\b03b9j4ek.output\" 2>/dev/null || cat \"/c/Users/ankit/AppData/Local/Temp/claude/d--FreeLanching-Loyal-LOYOLA-ERP/5edb70aa-3af9-4f85-844d-0fc9e72a21db/tasks/b03b9j4ek.output\" | tail -60)",
+      "Read(//c/Users/ankit/AppData/Local/Temp/claude/d--FreeLanching-Loyal-LOYOLA-ERP/5edb70aa-3af9-4f85-844d-0fc9e72a21db/tasks/**)",
+      "Bash(node -e ' *)",
+      "Bash(taskkill //F //PID 12412)",
+      "Bash(netstat -ano)",
+      "Bash(curl -s -o /dev/null -w \"admin/leave-requests: %{http_code}\\\\n\" http://localhost:3000/admin/leave-requests)",
+      "Bash(curl -s -o /dev/null -w \"dashboard/leave: %{http_code}\\\\n\" http://localhost:3000/dashboard/leave)",
+      "Bash(curl -s -o /dev/null -w \"slip route: %{http_code}\\\\n\" http://localhost:3000/api/leave-requests/00000000-0000-0000-0000-000000000000/slip?format=xlsx)",
+      "Bash(curl -s -o /dev/null -w \"admin/timetable: %{http_code}\\\\n\" http://localhost:3000/admin/timetable)",
+      "Bash(curl -s -o /dev/null -w \"admin/absences: %{http_code}\\\\n\" http://localhost:3000/admin/absences)",
+      "Bash(npm run *)",
+      "Bash(taskkill //F //PID 15936)",
+      "Bash(xargs grep -l \"chunk\\\\|base64-\")",
+      "Bash(curl -s -o /dev/null -w '%{http_code}' -H 'Cookie: __CMDSUB_OUTPUT__' http://localhost:3000/admin/teachers/03c5e1c3-baf3-479b-8ee3-a2744f59b12b)",
+      "Bash(curl -s -H 'Cookie: __CMDSUB_OUTPUT__' http://localhost:3000/admin/leave-summary)",
+      "Bash(curl -s -H 'Cookie: __CMDSUB_OUTPUT__' http://localhost:3000/admin/teachers/6260bcee-e88f-4b72-bd6d-1782bf4670f9)"
+    ],
+    "additionalDirectories": [
+      "D:\\FreeLanching\\Loyal\\LOYOLA_ERP\\src\\app\\api\\timetable\\section",
+      "D:\\FreeLanching\\Loyal\\LOYOLA_ERP",
+      "D:\\FreeLanching\\Loyal\\LOYOLA_ERP\\src\\app\\api\\leave-requests\\[id]"
+    ]
+  }
+}

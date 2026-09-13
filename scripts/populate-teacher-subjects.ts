@@ -10,6 +10,7 @@ import * as path from "node:path";
 import * as dotenv from "dotenv";
 import { createClient } from "@supabase/supabase-js";
 import type { Database } from "../src/lib/supabase/types";
+import { getActiveSession } from "../src/lib/session-context";
 
 dotenv.config({ path: path.join(process.cwd(), ".env.local") });
 
@@ -18,6 +19,11 @@ async function main() {
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!url || !key) throw new Error("NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY must be set in .env.local");
   const supabase = createClient<Database>(url, key, { auth: { persistSession: false } });
+
+  // Defaults to the active session, so qualifications are derived from the
+  // live timetable, not stale data from a past or draft session.
+  const sessionId = process.env.TARGET_SESSION_ID || (await getActiveSession(supabase)).id;
+  console.log(`Deriving from session ${sessionId}...`);
 
   // PostgREST caps a plain .select() at 1000 rows — page through it.
   const pairs = new Set<string>();
@@ -29,6 +35,7 @@ async function main() {
       .select("teacher_id, subject_id")
       .not("teacher_id", "is", null)
       .not("subject_id", "is", null)
+      .eq("session_id", sessionId)
       .range(from, from + pageSize - 1);
     if (error) throw error;
     for (const e of data ?? []) {

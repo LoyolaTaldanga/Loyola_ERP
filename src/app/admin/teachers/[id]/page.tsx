@@ -1,6 +1,10 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
+import { getViewingSession, isSessionEditable } from "@/lib/session-context";
+import { getTeacherLeaveSummary } from "@/lib/leave-quota";
+import { SessionBanner } from "@/components/session-banner";
+import { LeaveSummaryCard } from "@/components/leave-summary-card";
 import { EditableTimetableGrid, type EditableCellData } from "@/components/editable-timetable-grid";
 import { AssignClassTeacher, UnassignClassTeacherButton } from "./assign-class-teacher";
 
@@ -12,9 +16,14 @@ function classLabel(cls: { name: string; stream: string | null } | null): string
 export default async function TeacherProfilePage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const supabase = await createClient();
+  const viewing = await getViewingSession(supabase);
+  const readOnly = !isSessionEditable(viewing.status);
 
   const { data: teacher } = await supabase.from("teachers").select("*").eq("id", id).single();
   if (!teacher) notFound();
+
+  const year = new Date().getFullYear();
+  const leaveSummary = await getTeacherLeaveSummary(supabase, id, year);
 
   const [
     { data: periodSlots },
@@ -32,14 +41,17 @@ export default async function TeacherProfilePage({ params }: { params: Promise<{
     supabase
       .from("timetable_entries")
       .select("section_id, day_of_week, period_slot_id, subject_id, teacher_id, is_practical, subjects(name), sections(name, classes(name, stream))")
-      .eq("teacher_id", id),
+      .eq("teacher_id", id)
+      .eq("session_id", viewing.id),
     supabase
       .from("sections")
       .select("id, name, classes(name, stream, display_order)")
-      .eq("class_teacher_id", id),
+      .eq("class_teacher_id", id)
+      .eq("session_id", viewing.id),
     supabase
       .from("sections")
       .select("id, name, class_teacher_id, classes(name, stream, display_order), teachers(name)")
+      .eq("session_id", viewing.id)
       .order("name", { ascending: true }),
   ]);
 
@@ -98,6 +110,12 @@ export default async function TeacherProfilePage({ params }: { params: Promise<{
         </Link>
       </div>
 
+      <SessionBanner session={viewing} />
+
+      <div className="mt-6">
+        <LeaveSummaryCard summary={leaveSummary} year={year} />
+      </div>
+
       <div className="mt-6 rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
         <h2 className="font-semibold text-brand-primary">Class Teacher Of</h2>
         {classTeacherSections?.length ? (
@@ -108,7 +126,7 @@ export default async function TeacherProfilePage({ params }: { params: Promise<{
               return (
                 <li key={s.id} className="flex items-center justify-between">
                   <span>{label}</span>
-                  <UnassignClassTeacherButton sectionId={s.id} sectionLabel={label} />
+                  {!readOnly && <UnassignClassTeacherButton sectionId={s.id} sectionLabel={label} />}
                 </li>
               );
             })}
@@ -117,14 +135,24 @@ export default async function TeacherProfilePage({ params }: { params: Promise<{
           <p className="mt-2 text-sm text-slate-400">Not currently a class teacher of any section.</p>
         )}
 
-        <div className="mt-4 border-t border-slate-100 pt-4">
-          <AssignClassTeacher teacherId={id} sections={sectionOptions} />
-        </div>
+        {!readOnly && (
+          <div className="mt-4 border-t border-slate-100 pt-4">
+            <AssignClassTeacher teacherId={id} sections={sectionOptions} />
+          </div>
+        )}
       </div>
 
       <div className="mt-8">
-        <h2 className="mb-2 font-semibold text-brand-primary">Weekly Timetable</h2>
-        <p className="mb-3 text-sm text-slate-500">
+        <div className="flex items-center justify-between">
+          <h2 className="font-semibold text-brand-primary">Weekly Timetable</h2>
+          <a
+            href={`/api/teachers/${id}/timetable?session=${viewing.id}`}
+            className="rounded-md border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-600"
+          >
+            Download Excel
+          </a>
+        </div>
+        <p className="mb-3 mt-1 text-sm text-slate-500">
           Click a cell to edit. Use the ↗ link to jump to that class&apos;s full timetable for
           context.
         </p>
@@ -134,6 +162,7 @@ export default async function TeacherProfilePage({ params }: { params: Promise<{
           subjects={subjects ?? []}
           teachers={allTeachers ?? []}
           qualifiedTeacherIdsBySubject={qualifiedTeacherIdsBySubject}
+          readOnly={readOnly}
         />
       </div>
     </div>

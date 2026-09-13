@@ -8,11 +8,13 @@ export function UnresolvedCodeRow({
   count,
   sections,
   classes,
+  readOnly,
 }: {
   codeRaw: string;
   count: number;
   sections: { id: string; label: string }[];
   classes: { id: string; label: string }[];
+  readOnly: boolean;
 }) {
   const [mode, setMode] = useState<"existing" | "new">("existing");
   const [sectionId, setSectionId] = useState("");
@@ -40,7 +42,9 @@ export function UnresolvedCodeRow({
       <td className="px-3 py-2 font-mono">{codeRaw || "(blank)"}</td>
       <td className="px-3 py-2">{count}</td>
       <td className="px-3 py-2">
-        {done ? (
+        {readOnly ? (
+          <span className="text-xs text-slate-400">Read-only</span>
+        ) : done ? (
           <span className="text-green-700">✓ Applied to {result.applied} occurrence(s)</span>
         ) : (
           <div className="flex flex-wrap items-center gap-2">

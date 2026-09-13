@@ -23,6 +23,7 @@ export function TimetableCell({
   qualifiedTeacherIdsBySubject,
   sectionLabel,
   jumpHref,
+  readOnly,
 }: {
   sectionId: string;
   dayOfWeek: number;
@@ -39,6 +40,8 @@ export function TimetableCell({
   sectionLabel?: string;
   /** "Go to class timetable" link target — only relevant on a cross-section grid. */
   jumpHref?: string;
+  /** Viewing an archived session — the server rejects the write regardless, this just avoids presenting an edit affordance that will fail. */
+  readOnly?: boolean;
 }) {
   const [editing, setEditing] = useState(false);
   const [subjectId, setSubjectId] = useState(initialSubjectId ?? "");
@@ -90,22 +93,31 @@ export function TimetableCell({
   );
 
   if (!editing) {
+    const content = (
+      <>
+        {sectionLabel && <div className="text-xs font-medium text-brand-secondary">{sectionLabel}</div>}
+        {subjectName ? (
+          <div>
+            <div className="font-medium text-slate-800">
+              {subjectName}
+              {isPractical && <span className="ml-1 text-xs font-normal text-brand-secondary">(Practical)</span>}
+            </div>
+            <div className="text-xs text-slate-500">{teacherName ?? "— no teacher —"}</div>
+          </div>
+        ) : (
+          <span className="text-slate-300">{readOnly ? "—" : "+ Add"}</span>
+        )}
+      </>
+    );
     return (
       <div className="flex items-start justify-between gap-1 rounded px-2 py-1 hover:bg-slate-50">
-        <button type="button" onClick={() => setEditing(true)} className="flex-1 text-left">
-          {sectionLabel && <div className="text-xs font-medium text-brand-secondary">{sectionLabel}</div>}
-          {subjectName ? (
-            <div>
-              <div className="font-medium text-slate-800">
-                {subjectName}
-                {isPractical && <span className="ml-1 text-xs font-normal text-brand-secondary">(Practical)</span>}
-              </div>
-              <div className="text-xs text-slate-500">{teacherName ?? "— no teacher —"}</div>
-            </div>
-          ) : (
-            <span className="text-slate-300">+ Add</span>
-          )}
-        </button>
+        {readOnly ? (
+          <div className="flex-1 text-left">{content}</div>
+        ) : (
+          <button type="button" onClick={() => setEditing(true)} className="flex-1 text-left">
+            {content}
+          </button>
+        )}
         {jumpLink}
       </div>
     );

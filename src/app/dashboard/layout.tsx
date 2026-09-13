@@ -21,6 +21,9 @@ export default async function DashboardLayout({ children }: { children: React.Re
           </div>
         </div>
         <div className="flex items-center gap-4">
+          <Link href="/dashboard/leave" className="text-sm text-white/85 hover:text-white">
+            Request Leave
+          </Link>
           <Link href="/dashboard/settings" className="text-sm text-white/85 hover:text-white">
             Settings
           </Link>

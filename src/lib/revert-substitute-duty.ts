@@ -19,13 +19,15 @@ export async function revertExistingSubstituteDuty(
   client: Client,
   teacherId: string,
   date: string,
-  affectedPeriodNumbers: number[] | null
+  affectedPeriodNumbers: number[] | null,
+  sessionId: string
 ): Promise<string[]> {
   const { data: existingAsSubstitute } = await client
     .from("substitutions")
     .select("id, timetable_entries(period_slots(period_number))")
     .eq("substitute_teacher_id", teacherId)
     .eq("date", date)
+    .eq("session_id", sessionId)
     .in("status", ["assigned", "confirmed", "flagged_for_review"]);
 
   const toRevertIds = (existingAsSubstitute ?? [])

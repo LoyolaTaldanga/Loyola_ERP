@@ -8,6 +8,7 @@
 import { revalidatePath } from "next/cache";
 import { getCurrentUser } from "@/lib/auth/get-role";
 import { createAdminClient } from "@/lib/supabase/admin";
+import { assertSessionEditable } from "@/lib/session-context";
 
 export interface SaveCellInput {
   sectionId: string;
@@ -23,6 +24,14 @@ export async function saveTimetableCell(input: SaveCellInput): Promise<{ error: 
   if (!current || current.role !== "admin") return { error: "Not authorized." };
 
   const admin = createAdminClient();
+  const { data: section } = await admin.from("sections").select("session_id").eq("id", input.sectionId).single();
+  if (!section) return { error: "Section not found." };
+  try {
+    await assertSessionEditable(admin, section.session_id);
+  } catch (e) {
+    return { error: e instanceof Error ? e.message : "Session is not editable." };
+  }
+
   const { error } = await admin.from("timetable_entries").upsert(
     {
       section_id: input.sectionId,

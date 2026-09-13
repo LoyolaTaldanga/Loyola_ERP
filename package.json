@@ -9,12 +9,16 @@
     "lint": "eslint",
     "import:excel": "tsx scripts/import-excel.ts",
     "create:teachers": "tsx scripts/create-teacher-accounts.ts",
-    "populate:teacher-subjects": "tsx scripts/populate-teacher-subjects.ts"
+    "populate:teacher-subjects": "tsx scripts/populate-teacher-subjects.ts",
+    "link:teachers": "tsx scripts/link-teachers-cli.ts",
+    "create:admin": "tsx scripts/create-admin.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.6",
     "@supabase/supabase-js": "^2.45.4",
+    "exceljs": "^4.4.0",
     "next": "^15.5.25",
+    "pdfkit": "^0.20.2",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "resend": "^6.26.0",
@@ -26,6 +30,7 @@
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4.1.13",
     "@types/node": "^22.10.5",
+    "@types/pdfkit": "^0.17.6",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
     "autoprefixer": "^10.4.21",

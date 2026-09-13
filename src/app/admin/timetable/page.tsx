@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
+import { getViewingSession, isSessionEditable } from "@/lib/session-context";
+import { SessionBanner } from "@/components/session-banner";
 import { SectionSelect } from "@/components/section-select";
 import { EditableTimetableGrid, type EditableCellData } from "@/components/editable-timetable-grid";
 import { CellHighlighter } from "@/components/cell-highlighter";
@@ -12,12 +14,15 @@ export default async function AdminTimetablePage({
 }) {
   const { section: selectedSectionId, day, period } = await searchParams;
   const supabase = await createClient();
+  const viewing = await getViewingSession(supabase);
+  const readOnly = !isSessionEditable(viewing.status);
 
   const [{ data: classes }, { data: periodSlots }, { data: subjects }, { data: teachers }, { data: teacherSubjects }] =
     await Promise.all([
       supabase
         .from("classes")
         .select("id, name, stream, display_order, sections(id, name)")
+        .eq("session_id", viewing.id)
         .order("display_order", { ascending: true }),
       supabase.from("period_slots").select("*").order("period_number", { ascending: true }),
       supabase.from("subjects").select("id, name").order("name", { ascending: true }),
@@ -39,7 +44,8 @@ export default async function AdminTimetablePage({
     const { data: entries } = await supabase
       .from("timetable_entries")
       .select("day_of_week, period_slot_id, subject_id, teacher_id, is_practical, subjects(name), teachers(name)")
-      .eq("section_id", sectionId);
+      .eq("section_id", sectionId)
+      .eq("session_id", viewing.id);
 
     cells = (entries ?? []).map((e) => ({
       section_id: sectionId,
@@ -67,12 +73,16 @@ export default async function AdminTimetablePage({
         </Link>
       </div>
 
-      <div className="mt-6 rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
-        <LinkTeachersButton />
-      </div>
+      <SessionBanner session={viewing} />
+
+      {!readOnly && (
+        <div className="mt-6 rounded-lg border border-slate-200 bg-white p-5 shadow-sm">
+          <LinkTeachersButton sessionId={viewing.id} />
+        </div>
+      )}
 
       {sectionId && (
-        <div className="mt-6">
+        <div className="mt-6 flex items-end justify-between gap-4">
           <SectionSelect
             sectionId={sectionId}
             options={
@@ -85,6 +95,12 @@ export default async function AdminTimetablePage({
               ) ?? []
             }
           />
+          <a
+            href={`/api/timetable/section/${sectionId}`}
+            className="rounded-md border border-slate-300 bg-white px-3 py-1.5 text-sm font-medium text-slate-600"
+          >
+            Download Excel
+          </a>
         </div>
       )}
 
@@ -97,6 +113,7 @@ export default async function AdminTimetablePage({
             subjects={subjects ?? []}
             teachers={teachers ?? []}
             qualifiedTeacherIdsBySubject={qualifiedTeacherIdsBySubject}
+            readOnly={readOnly}
           />
         ) : (
           <p className="text-sm text-slate-400">No classes/sections yet. Run the Excel importer first.</p>

@@ -1,15 +1,16 @@
 "use client";
 
 import { useState, useTransition } from "react";
-import { linkTeachersByName, type LinkTeachersResult } from "./actions";
+import { linkTeachersByName } from "./actions";
+import type { LinkTeachersResult } from "../../../../scripts/import-lib/link-teachers";
 
-export function LinkTeachersButton() {
+export function LinkTeachersButton({ sessionId }: { sessionId: string }) {
   const [result, setResult] = useState<LinkTeachersResult | null>(null);
   const [pending, startTransition] = useTransition();
 
   function handleClick() {
     startTransition(async () => {
-      const r = await linkTeachersByName();
+      const r = await linkTeachersByName(sessionId);
       setResult(r);
     });
   }

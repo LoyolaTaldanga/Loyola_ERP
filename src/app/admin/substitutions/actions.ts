@@ -4,6 +4,7 @@ import { revalidatePath } from "next/cache";
 import { getCurrentUser } from "@/lib/auth/get-role";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { notifySubstituteIfVerified } from "@/lib/notify-substitute";
+import { assertSessionIsActive } from "@/lib/session-context";
 
 export interface AssignSubstituteResult {
   error: string | null;
@@ -19,6 +20,14 @@ export async function assignSubstitute(
   if (!substituteTeacherId) return { error: "Pick a substitute teacher.", emailWarning: null };
 
   const admin = createAdminClient();
+
+  const { data: sub } = await admin.from("substitutions").select("session_id").eq("id", substitutionId).single();
+  if (!sub) return { error: "Substitution not found.", emailWarning: null };
+  try {
+    await assertSessionIsActive(admin, sub.session_id);
+  } catch (e) {
+    return { error: e instanceof Error ? e.message : "Session is no longer active.", emailWarning: null };
+  }
 
   // A manual pick always wins over whatever the auto-engine suggested —
   // clears is_exception_fallback since a deliberate Admin choice is no

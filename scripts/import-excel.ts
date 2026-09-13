@@ -19,11 +19,12 @@ import type { Database } from "../src/lib/supabase/types";
 import { PERIOD_SLOTS, EXCEL_PERIOD_TO_SLOT } from "./import-lib/period-slots";
 import { normalizeSubject } from "../src/lib/subject-normalize";
 import { GRADE_ORDER, ClassCodeRegistry, parseClassLabel } from "./import-lib/class-codes";
+import { getActiveSession, assertSessionEditable } from "../src/lib/session-context";
 
 dotenv.config({ path: path.join(process.cwd(), ".env.local") });
 
-const CLASS_WISE_FILE = path.join(process.cwd(), "docs/reference/Class Time Table 202627.xlsx");
-const TEACHER_WISE_FILE = path.join(process.cwd(), "docs/reference/Teacher time table 2026-2027.xlsx");
+const CLASS_WISE_FILE = path.join(process.cwd(), "docs/reference/CLASS TIME TABLE 2026.xlsx");
+const TEACHER_WISE_FILE = path.join(process.cwd(), "docs/reference/TEACHERS' TIME TABLE 2026.xlsx");
 const REPORT_FILE = path.join(process.cwd(), "scripts/import-report.json");
 
 const DAY_NAMES = ["MON", "TUE", "WED", "THU", "FRI", "SAT"];
@@ -53,7 +54,7 @@ interface ClassWiseCell {
   className: string;
   stream: string | null;
   section: string;
-  dayOfWeek: number; // 1-5
+  dayOfWeek: number; // 1-6 (Saturday only present for blocks that have one)
   periodNumber: number; // matches PERIOD_SLOTS
   subjectRaw: string;
 }
@@ -65,7 +66,7 @@ interface ParsedClassWise {
 }
 
 function parseClassWiseSheet(registry: ClassCodeRegistry): ParsedClassWise {
-  const rows = sheetRows(CLASS_WISE_FILE, "PRINT CLASS");
+  const rows = sheetRows(CLASS_WISE_FILE, "CLASS TIME TABLE");
   const classes: ParsedClassWise["classes"] = [];
   const sections: ParsedClassWise["sections"] = [];
   const cells: ClassWiseCell[] = [];
@@ -91,7 +92,13 @@ function parseClassWiseSheet(registry: ClassCodeRegistry): ParsedClassWise {
     sections.push({ classKey, className, stream, section });
     registry.register({ className, stream, section });
 
-    for (let d = 0; d < 5; d++) {
+    // 5 weekday rows are mandatory; most blocks (all but the XI/XII stream
+    // blocks) also have a 6th Saturday row in the same position a 6th day
+    // would occupy — only consumed if it's actually there.
+    const hasSaturday = cellStr((rows[i + 2 + 2 * 5] ?? [])[0]).toUpperCase() === "SAT";
+    const dayCount = hasSaturday ? 6 : 5;
+
+    for (let d = 0; d < dayCount; d++) {
       const dayRow = rows[i + 2 + 2 * d];
       if (!dayRow) continue;
       for (let col = 1; col <= 9; col++) {
@@ -120,14 +127,14 @@ function parseClassWiseSheet(registry: ClassCodeRegistry): ParsedClassWise {
 
 interface TeacherWiseCell {
   teacherName: string;
-  dayOfWeek: number; // 1-5 (Saturday rows are parsed but dropped — schema has no day 6)
+  dayOfWeek: number; // 1-6
   periodNumber: number;
   subjectRaw: string;
   codeRaw: string;
 }
 
 function parseTeacherWiseSheet(): { teacherNames: string[]; cells: TeacherWiseCell[]; skippedBlocks: string[] } {
-  const rows = sheetRows(TEACHER_WISE_FILE, "TIME TABLE");
+  const rows = sheetRows(TEACHER_WISE_FILE, "Teachers' Time Table");
   const teacherNames = new Set<string>();
   const cells: TeacherWiseCell[] = [];
   const skippedBlocks: string[] = [];
@@ -149,7 +156,6 @@ function parseTeacherWiseSheet(): { teacherNames: string[]; cells: TeacherWiseCe
       const codeRow = rows[i + 3 + 2 * d];
       if (!subjectRow || !codeRow) continue;
       if (cellStr(subjectRow[0]).toUpperCase() !== DAY_NAMES[d]) continue;
-      if (d === 5) continue; // Saturday — schema only supports day_of_week 1-5
 
       for (let col = 1; col <= 9; col++) {
         const subjectRaw = cellStr(subjectRow[col]);
@@ -180,6 +186,13 @@ async function main() {
     throw new Error("NEXT_PUBLIC_SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY must be set in .env.local");
   }
   const supabase = createClient<Database>(url, key, { auth: { persistSession: false } });
+
+  // Defaults to whichever session is active — this importer is normally only
+  // run once, to bootstrap a session's data; "Create New Session" is the
+  // normal path for every year after that.
+  const sessionId = process.env.TARGET_SESSION_ID || (await getActiveSession(supabase)).id;
+  await assertSessionEditable(supabase, sessionId);
+  console.log(`Importing into session ${sessionId}...`);
 
   const registry = new ClassCodeRegistry();
 
@@ -220,12 +233,14 @@ async function main() {
     name: c.className,
     stream: c.stream,
     display_order: GRADE_ORDER.indexOf(c.className),
+    session_id: sessionId,
   }));
   const classNaturalKey = (c: { name: string; stream: string | null }) => `${c.name}|${c.stream ?? ""}`;
 
   const { data: existingClasses, error: existingClassesError } = await supabase
     .from("classes")
-    .select("id, name, stream");
+    .select("id, name, stream")
+    .eq("session_id", sessionId);
   if (existingClassesError) throw existingClassesError;
   const existingClassIdByKey = new Map(existingClasses!.map((c) => [classNaturalKey(c), c.id]));
 
